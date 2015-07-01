@@ -1,0 +1,210 @@
+
+                            ===============
+
+                            M D W F O N T S
+
+                            ===============
+
+
+--- Licence note ---
+
+mdwfonts package release note
+Copyright (c) 1996 Mark Wooding
+
+These programs are free software; you can redistribute them and/or modify
+them under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+These programs are distributed in the hope that they will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with these programs; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+
+--- What it's all about ---
+
+This is a LaTeX package and some various font bits which allow configurable
+fonts in documents, provide a `squashed' Courier font (inlcuding the bits
+David Carlisle left out of pslatex) and some maths support for Palatino.
+
+
+--- Licencing ---
+
+The packages are made available under the GNU General Public Licence (not the
+usual LaTeX agreement).  A copy of this licence is supplied in the file
+COPYING.  You should read this document if you haven't read it already, even
+if it's just for educational value.  I'm not actually sure how good a thing
+the GNU GPL actually is, so I'm sort of testing the water.  The idea that
+this is how all software should be distributed still fills me with a certain
+amount of trepidation.
+
+
+--- What's in the box ---
+
+You should have received the following files in whatever sort of archive
+thing this suite came in:
+
+  README        -- You've got this file for sure, because it's this one
+  COPYING       -- A textual version of the GNU General Public Licence
+  mdwfonts.dtx	-- Documentation and code for `mdwfonts.sty', the `.fd'
+		   files, and a whole lot of other stuff
+  mdwfonts.ins	-- Installation script for the packages
+  gpl.tex	-- LaTeX version of the GNU General Public Licence
+
+If you're missing any of these files, complain at whoever gave the rest of
+them to you, and get them quickly.  You /should/ also have a large collection
+of `.tfm' and `.vf' files:
+
+  pcrb7tn.tfm   pcrbo7tn.tfm  pcrr8rn.tfm   pcrro8rn.tfm  pzcmi8r.tfm
+  pcrb8a.tfm    pcrbo8a.tfm   pcrr8tn.tfm   pcrro8tn.tfm  zpplcmr.tfm
+  pcrb8rn.tfm   pcrbo8rn.tfm  pcrrc7tn.tfm  pplr8r.tfm    zpplcmrm.tfm
+  pcrb8tn.tfm   pcrbo8tn.tfm  pcrrc8tn.tfm  pplri8r.tfm   zpsycmrv.tfm
+  pcrbc7tn.tfm  pcrr7tn.tfm   pcrro7tn.tfm  psyr.tfm      zpzccmry.tfm
+  pcrbc8tn.tfm  pcrr8a.tfm    pcrro8a.tfm
+
+  pcrb7tn.vf    pcrbo7tn.vf   pcrr8tn.vf    pcrro7tn.vf   zpplcmrm.vf
+  pcrb8tn.vf    pcrbo8tn.vf   pcrrc7tn.vf   pcrro8tn.vf   zpsycmrv.vf
+  pcrbc7tn.vf   pcrr7tn.vf    pcrrc8tn.vf   zpplcmr.vf    zpzccmry.vf
+  pcrbc8tn.vf
+
+If you don't have these, then strictly speaking you can generate them given
+the above sources and fontinst.sty, but I found this ever so fiddly, and I
+recommend strongly that nobody else try unless they're feeling really brave.
+
+Finally, you may be lucky and have some extra files:
+
+  mdwfonts.sty	-- Unpacked `mdwfonts.sty' package
+  OMLpplcm.fd, OMSpzccm.fd, OMXpsycm.fd, OT1pplcm.fd and mTTpcr.fd
+		-- Font description files for LaTeX
+  mdwfonts.dvi	-- Typeset documentation for the system
+
+If you've already got these, then great, because you don't have to generate
+them.  If you haven't, it's not a big deal.  You might also have a bunch of
+files with extensions like `.log', `.aux', `.tmp', `.ilg' and so on.  These
+files are really not at all interesting, and you might as well get rid of
+them now.
+
+
+--- Extracting the packages ---
+
+If you don't have the various .sty files already, you'll need to extract them
+from the .dtx files.  This requires docstrip.tex, which should be part of
+your base LaTeX 2e distribution.  If you have docstrip vsersion 2.3d, which
+is available with the December 1995 release of LaTeX, things will go rather
+faster.  If your LaTeX release is much older than this, you should upgrade,
+because the packages need a fairly new LaTeX anyway.  (I could do something
+about this, but I won't, because I want to encourage everyone to upgrade.)
+
+If everything's set up correctly, all you should need to do is say
+
+  tex mdwfonts.ins
+
+or
+
+  latex mdwfonts.ins
+
+or whatever incantation is necessary to run TeX or LaTeX on the supplied
+`mdwfonts.ins' file on your system.
+
+TeX will grind away at the files for a bit, and then say `Done' at you. (This
+could take a while, so be patient.)  You will then have a mdwfonts.log file,
+which you can throw away, and a collection of sparkly new files.  Now the
+installation can really begin.
+
+
+--- Installing all the files ---
+
+The package comes with a large number of miscellaneous font files.  They
+ought to be placed in appropriate directories where TeX and/or other programs
+can find them.  Exactly where this will be depends heavily on your
+installation: try looking for the other fonts and put these with them.  The
+various extensions for the font files are:
+
+`.tfm' is a TeX Font Metric file, needed by TeX.
+`.vf' is a virtual font description file, needed by DVI-drivers.
+`.fd' is a font description file, required by LaTeX.
+
+You'll also need to put mdwfonts.sty somewhere where LaTeX will find
+it.  What you do with the documentation file is up to you.
+
+The various `.fd' files and mdwfonts.sty may not have been included in your
+distribution.  If you don't have them, run LaTeX on `mdwfonts.ins' to build
+them (see above).  I'm explicitly not giving instructions for building all
+the other font files, because I'd much prefer it if they were distributed as
+they are, please -- building them is a fiddly business, and I'd rather that
+only I had to do it.
+
+Once you've done all that, you must tell dvips about your new fonts, so add
+the following lines to the `psfonts.map' file, unless they're already there:
+
+  pcrb8rn Courier-Bold ".85 ExtendFont TeXBase1Encoding ReEncodeFont" <8r.enc <pcrb8a.pfb
+  pcrbo8rn Courier-BoldOblique ".85 ExtendFont TeXBase1Encoding ReEncodeFont" <8r.enc <pcrbo8a.pfb
+  pcrr8rn Courier ".85 ExtendFont TeXBase1Encoding ReEncodeFont" <8r.enc <pcrr8a.pfb
+  pcrro8rn Courier-Oblique ".85 ExtendFont TeXBase1Encoding ReEncodeFont" <8r.enc <pcrro8a.pfb
+
+The `pcrr8rn' line will already be in the file if you've installed the
+`pslatex' package, so don't bother putting it in again.
+
+
+--- Typesetting the documentation ---
+
+If you want to typeset the documentation for the package, you'll need some
+packages from the `mdwtools' distribution.  In particular, you need the
+`mdwtools.tex' file, and the `syntax.sty' and `sverb.sty' packages.  You'll
+also need the `mdwfonts.dtx' file for the package you want documentation on,
+and all the files it generated.
+
+Make sure you've got all the files, and then run LaTeX on mdwfonts.dtx.
+
+TeX will start hammering away for a very short while, and then stop and ask
+you whether you want to build the indexing files.  Generating index files
+takes a lot longer (I'd guess that it doubled the amount of time taken to
+typeset the `.dtx' file) so I don't recommend it unless:
+
+  * you've got a very fast processor, or
+  * you're very interested in how the package works internally, or
+  * you just like everything to be complete, or
+  * you're a masochist.
+
+Even so, there's no point writing indexing information the first time you
+run LaTeX on a file, because the table of contents hasn't been created yet,
+and when you LaTeX the file the second time, all the references will change.
+
+If you want the index files anyway, type `y' when you're asked.  Otherwise,
+type 'n'.  You know you want to type `n' really...
+
+If you want to do the job properly, you need to run LaTeX a second time
+to read in the contents table.  /This/ is the correct time to turn on
+indexing, if you really want it.
+
+If you did build the index files, you should now sort the index by saying
+
+  makeindex -s gind.ist mdwfonts.idx
+
+The `gind.ist' file should have come with LaTeX.  Having done this, you
+should run the `.dtx' file though LaTeX one final time, to insert the
+formatted index.
+
+You can now print or preview the generated `.dvi' file using whatever tools
+you usually use for such things.
+
+
+--- Contacting the author ---
+
+The author can be reached by email at mdw@excessus.demon.co.uk.  This is his
+personal dial-up account, paid for privately, so don't expect replies after
+five minutes or anything like that.
+
+If you do have any comments regarding the code, its documentation, or
+anything else to do with these packages, don't leave me guessing -- let me
+know.  While I won't guarantee to do anything about your comments, chances
+are that I'll right any wrongs and rescue any damsels in distress (oh, no,
+wrong spiel).
+
+
+-----------------------------------------------------------------------------

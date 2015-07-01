@@ -1,0 +1,35 @@
+
+@misc{accent,
+	AUTHOR = "Weinberger, Steven",
+	TITLE = "Speech Accent Archive",
+	PUBLISHER = "George Mason University",
+	YEAR = "2015",
+    howpublished = "http://accent.gmu.edu/"	}
+
+@misc{maus,
+	AUTHOR = "Florian Schiel",
+	TITLE = "The Munich Automatic Segmentation System",
+    howpublished = "http://www.bas.uni-muenchen.de/Bas/BasMAUS.html",
+    PUBLISHER = "Ludwig-Maximilians-Universitat"
+
+    	}
+
+
+@misc{mfcc,
+  author = "jameslyons",
+  title = "Mel Frequency Cepstral Coefficient (MFCC) tutorial",
+  publisher = "Practical Cryptography",
+  howpublished = "http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/"
+}
+
+@misc{convert,
+  title = "MediaHuman Audio Converter",
+  publisher = "MediaHuman",
+  howpublished = "http://www.mediahuman.com/audio-converter/"
+}
+
+@misc{convert,
+  title = "MediaHuman Audio Converter",
+  publisher = "MediaHuman",
+  howpublished = "http://www.crummy.com/software/BeautifulSoup/"
+}

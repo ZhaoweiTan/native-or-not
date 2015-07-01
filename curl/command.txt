@@ -1,0 +1,454 @@
+Bavarian Archive for Speech Signals Webservices: Conditions of Use for Academic Institutions
+
+Date 2014-12-15
+
+The Bavarian Archive for Speech Signals at the Ludwig-Maximilians-Universitaet Munich (BAS) provides free webservices for members of academic institutions (termed 'user' in the following) subject to the following Conditions of Use. The BAS may amend these Condtions of Use at any time by posting amended versions on this website.
+
+1. In order to access free BAS webservices, the user must be a member of an academic institution (i.e. can be authenticated via a Shiboleth authentification service provided by the academic home institution of the user; in case your institution does not provide such service, please obtain a CLARIN IDP account at https://user.clarin.eu/user/register). The BAS reserves the right to grant or deny access to the webservices or to terminate running processes at any time.
+2. The results of the webservices may only be used for non-profit research purposes. If you intend to utilize webservice results for commercial purposes or to access webservices from a commercial host, please contact the BAS prior to any usage to obtain a BAS user license. The BAS will apply reverse IP mapping to determine the IP address of hosts calling/accessing the BAS webservices to verify non-profit usage.
+3. The copyright of the results of the webservices belongs to the user of the webservices. However, the BAS retains the right to store the results on its servers for 24 hours for technical reasons. Stored data will not be transfered to third parties nor exploited or reviewed in any way by BAS.
+4. The user must be able to present proof that he has the rights to use all data that are uploaded and the right to transfer usage rights of all uploaded data to the BAS. The user entitles the BAS to store the uploaded data, to process them, to store all intermediate and final results of the process and to remove data that are stored in the user's account. 
+5. The user will indemnify and hold the BAS harmless from any claim arising out of the use of the webservices.
+6. Disclaimer: the use of the webservices is at own risk. The webservices are provided on an "as is" basis. The BAS expressively disclaims all warranties of any kind.
+7. Limitation of liability: the BAS will not be liable for any damages resulting from the use of the webservices.
+
+
+
+
+------------------
+help
+------------------
+Example curl call is:
+curl -X GET http://clarin.phonetik.uni-muenchen.de/BASWebServices/services/help
+----------------------------------------------------------------
+----------------------------------------------------------------
+runCOALAGetTemplates
+------------------
+Description: Returns a zip file with the template table files and instructions how to fill them. The tables are necessary to create CMDI metadata files with runCOALA.
+
+Example curl call is:
+curl -v -X GET -H 'content-type: application/x-www-form-urlencoded' 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runCOALAGetTemplates'
+
+
+Parameter description: 
+Output: A zip file containing the necessary template files and instructions for running COALA.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runCOALA
+------------------
+Description: Generates corpus and session CMDIs according to the media-corpus-profile and the media-session-profile of the ComponentRegistry by converting five CSV tables to the CMDI format. Use the runCOALAGetTemplates WebService to get templates for these tables. The resulting session CMDIs can be used as they are, while the corpus CMDI needs to be edited by hand.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F mediafiles-table=@<filename> -F writtenresources-table=@<filename> -F sessions-table=@<filename> -F corpus-title=<value> -F actors-table=@<filename> -F bundles-table=@<filename> -F corpus-name=<value> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runCOALA'
+
+Parameters:  mediafiles-table writtenresources-table sessions-table corpus-title actors-table bundles-table corpus-name
+
+Parameter description: 
+mediafiles-table: Assigns the file as the MediaFiles table.
+
+writtenresources-table: Assigns the file as the WrittenResources (i.e. Annotations) table.
+
+sessions-table: Assigns the file as the Sessions table.
+
+corpus-title: The corpus title or long name. Except for your institution you should not use any abbreviations. You may use white spaces here.
+
+actors-table: Assigns the file as the Actors (e.g. Speakers, Signers, ...) table.
+
+bundles-table: Assigns the file as the Bundles table.
+
+corpus-name: The short code name of the corpus (no spaces allowed).
+
+Output: An XML response containing the tags "success", "downloadLink", "output" and "warning". "success" states if the processing was successful or not, "downloadLink" specifies the location where the generated zip file (containing CMDI files) can be found, "output" contains the output that is mostly useful during debugging errors and "warning" contains any warnings, which occured during the processing.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runPho2Syl
+------------------
+Description: Syllabification of canonical or spontanous speech
+                 transcriptions for multiple languages
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F wsync=no -F tier=MAU -F lng=deu-DE -F i=@<filename> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runPho2Syl'
+
+Parameters:  wsync tier lng i
+
+Parameter description: 
+wsync: [yes, no] 
+Yes/no decision, whether each word boundary is
+                     considered as syllable boundary. Only relevant for spontaneous
+                     speech transcription input from the MAU tier. If set to 'yes',
+                     each syllable is assigned to exactly one word index. If set to
+                     'no', syllables can be part of more than one word.
+                     
+
+tier: [KAN, MAU] 
+Name of tier in the annotation file, whose content
+                     is to be syllabified. Currently only the BAS partiture tiers MAU
+                     and KAN are supported. KAN contains the canonical transcription
+                     which can be derived by the webservice RunG2P. MAU contains the
+                     spontaneous speech transcription which is aligned to the signal,
+                     that can be derived by the webservice WebMAUS.
+
+lng: [deu-DE, ekk-EE, eng-GB, ita-IT, hun-HU, nld-NL, eng-AU, eng-NZ, eng-US, pol-PL, kat-GE, fra-FR, fin-FI] 
+RCFC5646 locale code of the speech in the input
+                     parameters; defines the possible SAMPA phoneme symbol set in
+                     input; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [
+                     - iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for
+                     Austrian German spoken in 'Oberoesterreich'; alternatively, Iso
+                     639-3 char language code is supported; the language code 'aus'
+                     denotes 'Australian English' and not 'Australian Languages' as
+                     defined in Iso 639. 'nze' stands for New Zealand English, 'use'
+                     for American English.
+
+i: Input BAS partiture file. Encoding must
+                be utf-8. It must contain the tier specified by the
+                input parameter 'tier'.
+
+Output: A BAS Partiture file additionally
+                containing the syllabified output.  If the input
+                parameter 'tier' is set to MAU, a tier MAS is
+                generated that contains for each syllable analogously
+                to MAU time onset, duration, word index, and syllable
+                string information. If 'tier' is set to KAN, a tier
+                KAS is generated that contains for each word
+                analogously to KAN the canonical transcription with
+                phonemes segmented by blanks and syllables separated
+                by dots.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMINNI
+------------------
+Description: segments and labels a speech audio file into SAM-PA (or IPA) phonetic segments without any text/phonological input; results are stored either in praat compatible TextGrid file (configuration parameter OUTFORMAT=TextGrid) or a CSV table (the BPF MAU tier, configuration parameter OUTFORMAT=csv). This is a general service to process a single file which enables the usage of all possible options of MINNI. See the section Input for a detailed description of these options or use the operation 'runMAUSGetHelp' to download a current version of the MAUS/MINNI documentation.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F OUTIPA=false -F OUTFORMAT=TextGrid -F LANGUAGE=deu-DE -F WEIGHT=default -F MAUSSHIFT=default -F OUTSYMBOL=sampa -F MINPAUSLEN=5 -F USETRN=force -F INSPROB=0.0 -F SIGNAL=@<filename> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMINNI'
+
+Parameters:  OUTIPA OUTFORMAT LANGUAGE WEIGHT MAUSSHIFT OUTSYMBOL MINPAUSLEN USETRN INSPROB SIGNAL
+
+Parameter description: 
+OUTIPA: [true, false] 
+Deprecated option OUTIPA (as of maus version 2.98); please use option OUTSYMBOL=ipa in the future : If OUTIPA is set to true, the service produces UTF-8 IPA output instead of SAM-PA output. For backwards compatibility this option is still functional, if option OUTSYMBOL=sampa (default).
+
+OUTFORMAT: [csv, mau, TextGrid] 
+Defines the possible output formats: TextGrid - a praat compatible TextGrid file with one tier; csv|mau - only the BPF MAU tier (a CSV table); for a description of BPF see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html
+
+LANGUAGE: [deu-DE, deu, ekk-EE, ekk, eng-AU, eng-US, hun-HU, hun, ita-IT, ita] 
+Language of the speech to be processed; defines the possible phoneme symbol set in MAUS input; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [- iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'. The non-standard language code 'sampa' denotes a language independent SAM-PA variant of MAUS for which the SAM-PA symbols in the input BPF must be blank separated (e.g. /h OY t @/); LANGUAGE=sampa is the same as the option INFORMAT=bpf-sampa.
+
+WEIGHT: The option WEIGHT weights the influence of the statistical phonotactic bigram model against the acoustical scores. More precisely WEIGHT is multiplied to the phonotactic model score (log likelihood) before adding the score to the acoustical score within the search. Since the phonotactic model in most cases favors the apriori most likely pronunciation, increasing WEIGHT will at some point cause MAUS to choose always the most likely pronunciation (disregarding the acoustics); lower values of WEIGHT will favor less probable pronunciations to be selected according acoustic evidence. If the acoustic quality of the signal is very good and the HMMs of the language are well trained, it makes sense to lower WEIGHT. For most languages this option is default to 1.0.
+
+MAUSSHIFT: If set to n, this option causes the calculated MAUS segment boundaries to be shifted by n msec (default: 10) into the future. As reported by different sources, segmentations produced by a HMM model show consistent shift in the segment boundaries of about 8-12msec too early (probably to the begin of the analysing window; here: window length is 20msec, therefore the start of the window is 10msec earlier than the frame position in the middle of the window.) There is no conclusive explanation for that. The default should work for most cases.
+
+OUTSYMBOL: [sampa, ipa, manner, place] 
+Option OUTSYMBOL: Defines the encoding of phonetic symbols in output. If set to 'sampa' (default), phonetic symbols are encoded in language specific SAM-PA (with some coding differences to official SAM-PA; use service runMAUSGetInventar with option LANGUAGE=sampa to get a list of symbols and their mapping to IPA). If set to 'ipa', the service produces UTF-8 IPA output. If set to 'manner', the service produces IPA manner of articulation for each segment; possible values are: silence,vowel,diphthong,plosive,nasal,fricative,affricate,approximant,lateral-approximant,ejective. If set to 'place', the service produces IPA place of articulation for each segment; possible values are: silence,labial,dental,alveolar,post-alveolar,palatal,velar,uvular,glottal,front,central,back.
+
+MINPAUSLEN: Option MINPAUSLEN: Controls the behaviour of optional inter-phone silence. If set to 1, maus will detect all inter-phone silence intervals that can be found (minimum length for a silence interval is then 10 msec = 1 frame). If set to values n>1, the minimum length for an inter-phone silence interval to be detected is set to n*10 msec. For example MINPAUSLEN of 5 will cause MAUS to suppress inter-phone silence intervals up to a length of 40msec. Since 40 msec seems to be the border of perceivable silence, we set this option default to 5. With other words: inter-phone silences smaller than 50msec are not segmented but rather distributed equally to the adjacent segments. If one of the adjacent segments happens to be a plosive then the deleted silence interval is added totally to the plosive; if both adjacent segments are plosives, the interval is equally spread as with non-plosive adjacent segments.
+
+USETRN: [true, false, force] 
+If set to 'force', a pre-segmentation using the wav2trn tool is done by the webservice on-the-fly; this is useful, if the input signal has leading and/or trailing silence. Value 'true' has no effect.
+
+INSPROB: The option INSPROB influences the probability of deletion of segments. It is a constant factor (a constant value added to the log likelihood score) after each segment. Therefore, a higher value of INSPROB will cause the probability of segmentations with more segments go up, thus decreasing the probability of deletions (and increasing the probability of insertions, which are rarely modelled in the rule sets). This parameter has been evaluated on parts of the German Verbmobil data set (27425 segments) which were segmented and labelled manually (MAUS DEV set) and found to have its optimum at 0.0 (which is nice). Therefore we set the default value of INSPROB to 0.0. INSPROB was also tested against the MAUS TEST set to confirm the value of 0.0. It had an optimum at 0.0 as well. Note that this might NOT be the optimal value for other MAUS tasks.
+
+SIGNAL: mono sound file containing the speech signal to be segmented; PCM 16 bit resolution; any sampling rate; optimal results if leading and trailing silence intervals are truncated before processing; max. file size is 20MBytes. Although the mimetype of this input file is restricted to audio/x-wav (wav|WAV), the service will also process NIST/SPHERE (nis|NIS) and ALAW (al|AL|dea|DEA).
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where segmentation file can be found (the format of the file depends on the option selected in OUTFORMAT), output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing. Depending on input parameter OUTFORMAT the output file is either:  OUTFORMAT=TextGrid - a Praat TextGrid file containing up to three tiers. OUTFORMAT=csv|mau - a CSV table (BPF tier MAU) containing the phonetic segmentation by MAUS in SAM-PA.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runChunkPreparation
+------------------
+Description: This service transforms TextGrid and ELAN files to BAS partiture files containing the tiers ORT, TRN, and KAN. ORT and KAN contain the word tokens and their canonical transcriptions, respectively. TRN stores word chunks as given in the specified input file tier. The presence of the TRN tier improves the performance of the automatic phonetic segmentation system WEBMAUS.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F rate=16000 -F tier=ORT -F lng=deu-DE -F iform=tg -F i=@<filename> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runChunkPreparation'
+
+Parameters:  rate tier lng iform i
+
+Parameter description: 
+rate: [0, 999999] 
+Sample rate of signal file, from which the TextGrid or ELAN file has been derived.
+
+tier: Name of the item in the TextGrid or ELAN input, which is to be transformed into TRN and ORT tier of the BAS partiture format. Case-sensitive.
+
+lng: [aus, deu, ekk, eng, fin, ita, hun, nld, nze, pol, deu-DE, ekk-EE, eng-AU, eng-GB, eng-NZ, fin-FI, ita-IT, hun-HU, nld-NL, pol-PL] 
+RCFC5646 locale code; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [ - iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'. Alternatively, Iso 639-3 is accepted.
+
+iform: [tg, eaf] 
+Format of the input file. Currently only tg (standard or short TextGrid) and eaf (ELAN annotation format) are supported.
+
+i: Input file. MIMEType depends on input parameter iform.
+
+Output: Output file in BAS partitur format.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMAUSBasicGerman
+------------------
+Description: segments a German audio file into SAM-PA phonetic segments given a German orthographic transcription; result is stored in a three-layer (word segmentation with orthographic labels, word segmentation with canonical pronunciation labels in SAM-PA, phonemic segmentation with SAM-PA labels) praat textgrid file; this is a basic MAUS service which uses only default options, for a more controllable service see operation 'runMAUS'.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F OUTFORMAT=TextGrid -F NOINITIALFINALSILENCE=false -F INSKANTEXTGRID=true -F TEXT=@<filename> -F INSORTTEXTGRID=true -F SIGNAL=@<filename> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasicGerman'
+
+Parameters:  OUTFORMAT NOINITIALFINALSILENCE INSKANTEXTGRID TEXT INSORTTEXTGRID SIGNAL
+
+Parameter description: 
+OUTFORMAT: Defines the possible output formats: TextGrid - a praat compatible TextGrid file; mau-append|par - the input BPF file with a new (or replaced) tier MAU; csv|mau - only the BPF MAU tier (CSV table); legacyEMU - a file with extension *.EMU that contains in the first part the Emu hlb file (*.hlb) and in the second part the Emu phonetic segmentation (*.phonetic)(parts are separated by a line '--- cut here ---'); for a description of BPF see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html This option can not be set in this service.
+
+NOINITIALFINALSILENCE: [true, false] 
+
+      			  Switch to suppress the automatic modeling on a leading/trailing silence 
+      			  interval. This is useful if the signal is for instance cut from a larger 
+      			  utterance and is known to have no leading/trailing silence. This option 
+      			  can not be set in this service.
+      			
+
+INSKANTEXTGRID: Switch to create an additional tier in the TextGrid output file with a word segmentation labelled with the canonic phonemic transcript (taken from the input KAN tier). This option can not be set in this service.
+
+TEXT: orthographic text of the utterance to be segmented; words are white space separated; encoding is utf-8; punctuations are ignored
+
+INSORTTEXTGRID: Switch to create an additional tier ORT in the TextGrid output file with a word segmentation labelled with the orthographic transcript (taken from the input ORT tier); this option is only effective, if the input BPF contains an additional ORT tier. This option can not be set in this service.
+
+SIGNAL: mono sound file containing the speech signal to be segmented; PCM 16 bit resolution; any sampling rate; optimal results if leading and trailing silence intervals are truncated before processing; max. file size is 20MBytes. Although the mimetype of this input file is restricted to audio/x-wav (wav|WAV), the service will also process NIST/SPHERE (nis|NIS) and ALAW (al|AL|dea|DEA).
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where the Praat TextGrid file can be found, output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing. The resulting Praat TextGrid file contains three tiers: orthographic transcription (segmented in words), canonical phonemic transcription in German SAM-PA (segmented in words), phonemic segmentation by MAUS in SAM-PA
+----------------------------------------------------------------
+----------------------------------------------------------------
+runTTS
+------------------
+Description: Generates a signal file based on the Mary Text-to-Speech (TTS) system.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: application/x-www-form-urlencoded' 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runTTS?AUDIO=WAVE_FILE&INPUT_TYPE=TEXT&INPUT_TEXT=<value>&VOICE=bits1unitselautolabel&OUTPUT_TYPE=AUDIO'
+
+Parameters:  AUDIO INPUT_TYPE INPUT_TEXT VOICE OUTPUT_TYPE
+
+Parameter description: 
+AUDIO: [WAVE_FILE] 
+The audio type of the output.
+
+INPUT_TYPE: [TEXT] 
+The data type of the input.
+
+INPUT_TEXT: The text that should be synthesized in the form 'Das+ist+ein+Test'.
+
+VOICE: [bits1unitselautolabel, bits2unitselautolabel, bits3unitselautolabel, bits4unitselautolabel, bits1unitselautolabelhmm, bits2unitselautolabelhmm, bits3unitselautolabelhmm, bits4unitselautolabelhmm] 
+The voice that is used for synthesizing the speech file.
+
+OUTPUT_TYPE: [AUDIO] 
+The data type of the output.
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where the generated audio file (depending on the parameter AUDIO) can be found, output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMAUSBasic
+------------------
+Description: segments an audio file into SAM-PA phonetic segments given an orthographic transcription; result is stored in a three-layer (word segmentation with orthographic labels, word segmentation with canonical pronunciation labels in SAM-PA, phonemic segmentation with SAM-PA labels) praat textgrid file; this is a basic MAUS service which uses only default options, for a more controllable service see operation 'runMAUS'.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F OUTFORMAT=TextGrid -F NOINITIALFINALSILENCE=false -F INSKANTEXTGRID=true -F LANGUAGE=deu-DE -F TEXT=@<filename> -F INSORTTEXTGRID=true -F USETRN=force -F SIGNAL=@<filename> 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'
+
+Parameters:  OUTFORMAT NOINITIALFINALSILENCE INSKANTEXTGRID LANGUAGE TEXT INSORTTEXTGRID USETRN SIGNAL
+
+Parameter description: 
+OUTFORMAT: Defines the possible output formats: TextGrid - a praat compatible TextGrid file with two tiers; par|mau-append - the input BPF file with a new (or replaced) tier MAU; csv|mau - only the BPF MAU tier (CSV table); legacyEMU - a file with extension *.EMU that contains in the first part the Emu hlb file (*.hlb) and in the second part the Emu phonetic segmentation (*.phonetic)(parts are separated by a line '--- cut here ---'); for a description of BPF see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html This option can not be set in this service.
+
+NOINITIALFINALSILENCE: [true, false] 
+Switch to suppress the automatic modeling on a leading/trailing silence interval. This is useful if the signal is for instance cut from a larger utterance and is known to have no leading/trailing silence. This option can not be set in this service. 
+
+INSKANTEXTGRID: Switch to create an additional tier in the TextGrid output file with a word segmentation labelled with the canonic phonemic transcript (taken from the input KAN tier). This option can not be set in this service.
+
+LANGUAGE: [deu-DE, ekk-EE, eng-AU, eng-GB, eng-NZ, eng-US, fin-FI, ita-IT, hun-HU, nld-NL, pol-PL, deu, eng, ita, hun, nld, aus, pol, nze, fin, ekk] 
+Language of the speech to be processed; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [ - iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'; defines the possible phoneme symbol set in input and some language specific transformations within the MAUS process
+
+TEXT: orthographic text of the utterance to be segmented; words are white space separated; encoding is utf-8; punctuations are ignored
+
+INSORTTEXTGRID: Switch to create an additional tier ORT in the TextGrid output file with a word segmentation labelled with the orthographic transcript (taken from the input ORT tier); this option is only effective, if the input BPF contains an additional ORT tier. This option can not be set in this service.
+
+USETRN: If set to true, the service searches the input BPF for a TRN tier (turn/chunk segmentation, see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatsdeu.html#TRN). The synopsis for a TRN entry is: 'TRN: (start-sample) (duration-sample) (word-link-list) (label)', e.g. 'TRN: 23654 56432 0,1,2,3,4,5,6 sentence1' (the speech within the recording 'sentence1' starts with sample 23654, last for 56432 samples and covers the words 0-6). If only one TRN entry is found, the segmentation is restricted within a time range given by this TRN tier entry; this is useful, if there exists a reliable pre-segmentation of the recorded utterance, i.e. the start and end of speech within the recording is known. If more than one TRN entry is found, the webservice performs an segmentation for each 'chunk' defined by a TRN entry and aggregates all individual results into a single results file; this is useful if the input consists of long recordings, for which a manual chunk segmentation is available. If USETRN is set to 'force', a pre-segmentation using the wav2trn tool is done by the webservice on-the-fly; this is useful, if the input BPF does not contain a TRN entry and the input signal has leading and/or trailing silence. This option can not be set in this service.
+
+SIGNAL: mono sound file containing the speech signal to be segmented; PCM 16 bit resolution; any sampling rate; optimal results if leading and trailing silence intervals are truncated before processing; max. file size is 20MBytes. Although the mimetype of this input file is restricted to audio/x-wav (wav|WAV), the service will also process NIST/SPHERE (nis|NIS) and ALAW (al|AL|dea|DEA).
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where the Praat TextGrid file can be found, output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing. The Praat TextGrid file containing three tiers: orthographic transcription (segmented in words), canonical phonemic transcription in SAM-PA (segmented in words), phonemic segmentation by MAUS in SAM-PA
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMAUS
+------------------
+Description: segments a speech audio file into SAM-PA phonetic segments given a tokenized phonemic transcription; results are stored either in praat compatible TextGrid file (configuration parameter OUTFORMAT=TextGrid) or the MAU tier of the BPF input file (configuration parameter OUTFORMAT=csv|mau) or in a file with extension *.EMU that contains in the first part the Emu hlb file (hierarchy) and in the second part the Emu phonetic segmentation (parts are separated by a line '--- cut here ---')(configuration parameter OUTFORMAT=legacyEMU). This is a general MAUS service to process a single file which enables the usage of all possible options of MAUS. See the section Input for a detailed description of these options or use the operation 'runMAUSGetHelp' to download a current version of the MAUS documentation.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F OUTIPA=false -F NOINITIALFINALSILENCE=false -F INFORMAT=bpf -F LANGUAGE=deu-DE -F OUTSYMBOL=sampa -F MINPAUSLEN=5 -F USETRN=false -F SIGNAL=@<filename> -F STARTWORD=0 -F ENDWORD=999999 -F INSPROB=0.0 -F OUTFORMAT=TextGrid -F BPF=@<filename> -F INSKANTEXTGRID=false -F WEIGHT=default -F MAUSSHIFT=default -F MODUS=standard -F INSORTTEXTGRID=false 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUS'
+
+Parameters:  OUTIPA NOINITIALFINALSILENCE INFORMAT LANGUAGE OUTSYMBOL MINPAUSLEN USETRN SIGNAL STARTWORD ENDWORD INSPROB OUTFORMAT BPF INSKANTEXTGRID WEIGHT MAUSSHIFT MODUS INSORTTEXTGRID
+
+Parameter description: 
+OUTIPA: [true, false] 
+Deprecated option OUTIPA (as of maus version 2.98); please use option OUTSYMBOL=ipa in the future : If OUTIPA is set to true, the service produces UTF-8 IPA output instead of SAM-PA output. For backwards compatibility this option is still functional, if option OUTSYMBOL=sampa (default).
+
+NOINITIALFINALSILENCE: [true, false] 
+ Option NOINITIALFINALSILENCE: 
+			      Switch to suppress the automatic modeling on a leading/trailing silence 
+			      interval. This is useful if the signal is for instance cut from a larger 
+			      utterance and is known to have no leading/trailing silence.
+			    
+
+INFORMAT: [bpf, bpf-sampa] 
+Option INFORMAT: Defines the possible input formats: bpf - a BPF file with (minimum) tier KAN; bpf-sampa - BPF file with KAN tier with blank separated SAM-PA symbols, switches to language independent SAM-PA mode processing; for a description of BPF see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html
+
+LANGUAGE: [deu-DE, ekk-EE, eng-AU, eng-GB, eng-NZ, eng-US, fin-FI, hun-HU, ita-IT, kat-GE, pol-PL, por-PT, nld-NL, spa-ES, aus, deu, ekk, eng, fin, hun, ita, kat, nld, nze, pol, por, spa, sampa] 
+Option LANGUAGE: Language of the speech to be processed; defines the possible phoneme symbol set in MAUS input and the pronunciation modelling module. RFC5646 sub-structure 'iso639-3 - iso3166-1 [- iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'. The  language code 'sampa' (not RCFC5646) denotes a language independent SAM-PA variant of MAUS for which the SAM-PA symbols in the input BPF must be blank separated (e.g. /h OY t @/) (selecting LANGUAGE=sampa is the same as the MAUS option INFORMAT = bpf-sampa).
+
+OUTSYMBOL: [sampa, ipa, manner, place] 
+Option OUTSYMBOL: Defines the encoding of phonetic symbols in output. If set to 'sampa' (default), phonetic symbols are encoded in language specific SAM-PA (with some coding differences to official SAM-PA; use service runMAUSGetInventar with option LANGUAGE=sampa to get a list of symbols and their mapping to IPA). If set to 'ipa', the service produces UTF-8 IPA output. If set to 'manner', the service produces IPA manner of articulation for each segment; possible values are: silence, vowel, diphthong, plosive, nasal, fricative, affricate, approximant, lateral-approximant, ejective. If set to 'place', the service produces IPA place of articulation for each segment; possible values are: silence, labial, dental, alveolar, post-alveolar, palatal, velar, uvular, glottal, front, central, back.
+
+MINPAUSLEN: Option MINPAUSLEN: Controls the behaviour of optional inter-word silence. If set to 1, maus will detect all inter-word silence intervals that can be found (minimum length for a silence interval is then 10 msec = 1 frame). If set to values n>1, the minimum length for an inter-word silence interval to be detected is set to n*10 msec. For example MINPAUSLEN of 5 will cause MAUS to suppress inter-word silence intervals up to a length of 40msec. Since 40 msec seems to be the border of perceivable silence, we set this option default to 5. With other words: inter-word silences smaller than 50msec are not segmented but rather distributed equally to the adjacent segments. If one of the adjacent segments happens to be a plosive then the deleted silence interval is added totally to the plosive; if both adjacent segments are plosives, the interval is equally spread as with non-plosive adjacent segments.
+
+USETRN: [true, false, force] 
+Option USETRN: If set to true, the service searches the input BPF for a TRN tier (turn/chunk segmentation, see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatsdeu.html#TRN). The synopsis for a TRN entry is: 'TRN: (start-sample) (duration-sample) (word-link-list) (label)', e.g. 'TRN: 23654 56432 0,1,2,3,4,5,6 sentence1' (the speech within the recording 'sentence1' starts with sample 23654, last for 56432 samples and covers the words 0-6). If only one TRN entry is found, the segmentation is restricted within a time range given by this TRN tier entry; this is useful, if there exists a reliable pre-segmentation of the recorded utterance, i.e. the start and end of speech within the recording is known. If more than one TRN entry is found, the webservice performs an segmentation for each 'chunk' defined by a TRN entry and aggregates all individual results into a single results file; this is useful if the input consists of long recordings, for which a manual chunk segmentation is available. If USETRN is set to 'force', a pre-segmentation using the wav2trn tool is done by the webservice on-the-fly; this is useful, if the input BPF does not contain a TRN entry and the input signal has leading and/or trailing silence.
+
+SIGNAL: mono sound file containing the speech signal to be segmented; PCM 16 bit resolution; any sampling rate; optimal results if leading and trailing silence intervals are truncated before processing; max. file size is 20MBytes. Although the mimetype of this input file is restricted to audio/x-wav (wav|WAV), the service will also process NIST/SPHERE (nis|NIS) and ALAW (al|AL|dea|DEA).
+
+STARTWORD: [0, 999999] 
+Option STARTWORD: If set to a value n>0, this option causes maus to start the segmentation with the word number n (word numbering in BPF starts with 0). This is useful if the input signal file is just a segment within a longer transcript. See also option ENDWORD.
+
+ENDWORD: [0, 999999] 
+Option ENDWORD: If set to a value n<999999, this option causes maus to end the segmentation with the word number n (word numbering in BPF starts with 0). This is useful if the input signal file is just a segment within a longer transcript. See also option STARTWORD.
+
+INSPROB: Option INSPROB: The option INSPROB influences the probability of deletion of segments. It is a constant factor (a constant value added to the log likelihood score) after each segment. Therefore, a higher value of INSPROB will cause the probability of segmentations with more segments go up, thus decreasing the probability of deletions (and increasing the probability of insertions, which are rarely modelled in the rule sets). This parameter has been evaluated on parts of the German Verbmobil data set (27425 segments) which were segmented and labelled manually (MAUS DEV set) and found to have its optimum at 0.0 (which is nice). Therefore we set the default value of INSPROB to 0.0. INSPROB was also tested against the MAUS TEST set to confirm the value of 0.0. It had an optimum at 0.0 as well. Note that this might NOT be the optimal value for other MAUS tasks.
+
+OUTFORMAT: [par, mau-append, csv, mau, TextGrid, legacyEMU] 
+Option OUTFORMAT: Defines the possible output formats: TextGrid - a praat compatible TextGrid file; par|mau-append - the input BPF file with a new (or replaced) tier MAU; csv|mau - only the BPF MAU tier (CSV table); legacyEMU - a file with extension *.EMU that contains in the first part the Emu hlb file (*.hlb) and in the second part the Emu phonetic segmentation (*.phonetic)(parts are separated by a line '--- cut here ---'); for a description of BPF see http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html
+
+BPF: Phonemic transcription of the utterance to be segmented. Format is a BAS Partitur Format (BPF) file with a KAN tier. The KAN tier contains a table with 3 columns and one line per word in the input. Column 1 is always 'KAN:'; column 2 is an integer starting with 0 denoting the word position within the input; column 3 contains the canonical pronunciation of the word coded in SAM-PA; note that this SAM-PA string must not contain blanks, except for the language 'sampa', where the individual SAM-PA symbols must be separated by blanks (e.g 'h OY t @'). See http://www.bas.uni-muenchen.de/forschung/Bas/BasFormatseng.html for detailed description of the BPF.
+
+INSKANTEXTGRID: [true, false] 
+OPTION INSKANTEXTGRID: Switch to create an additional tier in the TextGrid output file with a word segmentation labelled with the canonic phonemic transcript (taken from the input KAN tier).
+
+WEIGHT: The option WEIGHT weights the influence of the statistical pronunciation model against the acoustical scores. More precisely WEIGHT is multiplied to the pronunciation model score (log likelihood) before adding the score to the acoustical score within the search. Since the pronunciation model in most cases favors the canonical pronunciation, increasing WEIGHT will at some point cause MAUS to choose always the canonical pronunciation; lower values of WEIGHT will favor less probable paths be selected according to acoustic evidence. If the acoustic quality of the signal is very good and the HMMs of the language are well trained, it makes sense to lower WEIGHT. For most languages this option is default to 1.0. In an evaluation on parts of the German Verbmobil data set (27425 segments) which were segmented and labelled manually (MAUS DEV set) WEIGHT was optimized to 7.0. Note that this might NOT be the optimal value for other languages. For instance Italian shows best results with WEIGHT=1.0, Estonian with WEIGHT=2.5
+
+MAUSSHIFT: Option MAUSSHIFT: If set to n, this option causes the calculated MAUS segment boundaries to be shifted by n msec (default: 10) into the future. As reported by different sources, segmentations produced by a HMM model show consistent shift in the segment boundaries of about 8-12msec too early (probably to the begin of the analysing window; here: window length is 20msec, therefore the start of the window is 10msec earlier than the frame position in the middle of the window.) There is no conclusive explanation for that. The default should work for most cases.
+
+MODUS: [standard, align] 
+Option MODUS: Operation modus of MAUS: default is 'standard' which is the segmentation and labelling using the MAUS technique as described in Schiel ICPhS 1999. If set to 'align', a forced alignment is performed on the input SAM-PA string defined in the KAN tier of the BPF (the same effect as the deprecated former option CANONLY=true).
+
+INSORTTEXTGRID: [true, false] 
+Option INSORTTEXTGRID: Switch to create an additional tier ORT in the TextGrid output file with a word segmentation labelled with the orthographic transcript (taken from the input ORT tier); this option is only effective, if the input BPF contains an additional ORT tier.
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where segmentation file can be found (the format of the file depends on the option selected in OUTFORMAT), output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing. Depending on input parameter OUTFORMAT the output file is either:  OUTFORMAT=TextGrid - a Praat TextGrid file containing up to three tiers: orthographic transcript (segmented in words), canonical phonemic transcription in German SAM-PA (segmented in words), phonemic segmentation by MAUS in SAM-PA. OUTFORMAT=par|mau-append - the BPF input file extended by a tier MAU containing the phonemic segmentation by MAUS in SAM-PA; if the input file already contains such a tier, this is replaced. OUTFORMAT=csv|mau - just the BPF MAU tier (CSV table). OUTFORMAT=legacyEMU - a file with extension *.EMU that contains in the first part the Emu hlb file (*.hlb) and in the second part the Emu phonetic segmentation (*.phonetic)(parts are separated by a line '--- cut here ---')
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMAUSGetInventar
+------------------
+Description: Returns the available phonemic input inventar (in SAMPA) for a given language.
+
+Example curl call is:
+curl -v -X GET -H 'content-type: application/x-www-form-urlencoded' 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSGetInventar?LANGUAGE=deu-DE'
+
+Parameters:  LANGUAGE
+
+Parameter description: 
+LANGUAGE: [deu-DE, ekk-EE, eng-AU, eng-GB, eng-NZ, eng-US, fin-FI, hun-HU, ita-IT, kat-GE, nld-NL, pol-PL, por-PT, spa-ES, aus, deu, ekk, eng, fin, hun, ita, kat, nld, nze, pol, por, spa, sampa] 
+Language of the phoneme symbol set; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [ - iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'.
+
+Output: List of accepted input phonemic SAM-PA symbols for the selected language; one symbol per line; this can be used by calling applications to pre-test the transcription input to the runMAUS service for faulty symbols.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runTTSFile
+------------------
+Description: Generates a signal file based on the Mary Text-to-Speech (TTS) system.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F AUDIO=WAVE_FILE -F INPUT_TYPE=TEXT -F INPUT_TEXT=@<filename> -F VOICE=bits1unitselautolabel -F OUTPUT_TYPE=AUDIO 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runTTSFile'
+
+Parameters:  AUDIO INPUT_TYPE INPUT_TEXT VOICE OUTPUT_TYPE
+
+Parameter description: 
+AUDIO: [WAVE_FILE] 
+The audio type of the output.
+
+INPUT_TYPE: [TEXT] 
+The data type of the input.
+
+INPUT_TEXT: Text file that contains the text that should be synthesized.
+
+VOICE: [bits1unitselautolabel, bits2unitselautolabel, bits3unitselautolabel, bits4unitselautolabel, bits1unitselautolabelhmm, bits2unitselautolabelhmm, bits3unitselautolabelhmm, bits4unitselautolabelhmm] 
+The voice that is used for synthesizing the speech file.
+
+OUTPUT_TYPE: [AUDIO] 
+The data type of the output.
+
+Output: A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where the generated audio file (depending on the parameter AUDIO) can be found, output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runG2P
+------------------
+Description: Creates the canonical phonemic transcription based on the input txt and a trained statistical model based on a language specific lexicon.
+
+Example curl call is:
+curl -v -X POST -H 'content-type: multipart/form-data'  -F com=no -F align=no -F stress=no -F lng=deu-DE -F syl=no -F embed=no -F iform=txt -F i=@<filename> -F tgrate=16000 -F oform=bpf -F map=no -F featset=standard -F tgitem=ort 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runG2P'
+
+Parameters:  com align stress lng syl embed iform i tgrate oform map featset tgitem
+
+Parameter description: 
+com: [yes, no] 
+Option com: yes/no decision whether <*> strings should be treated as
+                annotation markers.  If set to 'yes', then strings of this type are considered as
+                annotation markers that are not processed but passed on to the output. For
+                oform='bpf' this means, that the markers appear in the ORT and KAN tier with a word
+                index on their own. WebMAUS makes use of the markers < usb > (e.g.
+                non-understandable word or other human noises), < nib > (non-human noise), and
+                < P > (pauses), without the blanks between "usb", "nib" and "P" and the brackets "<"
+                and ">" (which are needed for formatting reasons).  Make sure that your input
+                does not contain any other markers, if you use runG2P for WebMAUS. Markers must not
+                contain white spaces, and must be separated from word tokens by blanks. They do not
+                need to be blank-separated from non-word tokens as punctuation.
+
+align: [yes, no, maus] 
+Option align: yes/no/sym decision whether or not the transcription is to be letter-aligned. Examples: if align is set to 'yes' the transcription for 'archaeopteryx' is 'A: _ k _ _ I Q p t @ r I k+s', i.e. 'ar' is mapped to 'A: _', and 'x' to 'k+s'. If contained in the output, syllable boundaries and word stress are '+'-concatenated with the preceeding, resp. following symbol.  'sym' causes a special symmetric alignment which is needed e.g. for MAUS rule training, i.e. word: a r c h a e o p t e r y x _; transcription: A: _ k _ _ I Q p t @ r I k s.  Syllable boundaries and word stress are not part of the output of this 'sym' alignment. For the output formats 'tab', 'exttab', 'lex', and 'extlex' also the aligned orthography is letter-splitted to account for multi-character letters in languages as Hungarian.
+
+stress: [yes, no] 
+Option stress: yes/no decision whether or not word stress is to be added to the output transcription.  Stress is marked by simple apostrophs that are inserted into the transcription with separating blanks.  
+
+lng: [aus, deu, ekk, eng, fra, ita, hun, kat, nld, nze, pol, use, fin, deu-DE, ekk-EE, eng-GB, ita-IT, hun-HU, nld-NL, eng-AU, eng-NZ, eng-US, pol-PL, kat-GE, fra-FR, fin-FI] 
+Option lng: RCFC5646 locale code of the speech in the input parameters; defines the possible SAMPA phoneme symbol set in input; we use the RFC5646 sub-structure 'iso639-3 - iso3166-1 [ - iso3166-2], e.g. 'eng-US' for American English, 'deu-AT-1' for Austrian German spoken in 'Oberoesterreich'; alternatively, Iso 639-3 char language code is supported;  the language code 'aus' denotes 'Australian English' and not 'Australian Languages' as defined in Iso 639. 'nze' stands for New Zealand English, 'use' for American English.
+
+syl: [yes, no] 
+Option syl: yes/no decision whether or not the output transcription is to be syllabified. Syllable boundaries '.' are inserted into the transcription with separating blanks.
+
+embed: [no, maus] 
+Option embed: Macro option for embedding G2P into WEBMAUS. If set to 'maus', it overwrites several basic options as follows: 'stress', 'syl', and 'align' are set to 'no'. 'com' is set to 'yes'. 'oform' is set to 'bpf' if it was not set to 'bpfs' by the user. 'map' is set to chosenLanguage_maus. Small single letters are transcribed as word fragments instead of spelling.
+
+iform: [txt, bpf, list, tcf, tg] 
+Option iform: Accepted input formats for grapheme phoneme conversion. 'txt' indicates connected text input, which will be tokenized before the conversion. 'list' indicates a sequence of unconnected words, that does not need to be tokenized. Furthermore, 'list' requires a different part-of-speech tagging strategy than 'txt' for the extraction of the 'extended' feature set (see Parameter 'featset'). 'tcf' indicates, that the input format is TCF containing at least a tokenization dominated by the element 'tokens'. 'tg' indicates TextGrid input. Long and short format is supported. For TextGrid input additionally the name of the item containing the words to be transcribed is to be specified by the parameter 'tgname'. In combination with 'bpf' output format 'tg' input additionally requires the specification of the sample rate by the parameter 'tgrate'. Input format 'bpf' indicates BAS partitur file input containing an ORT tier to be transcribed.
+
+i: Orthographic text of the utterance to be converted; words are white space separated; encoding is utf-8; can contain punctuation which is ignored in some output formats (see parameter oform). Numbers will internally be converted to letters.
+
+tgrate: [0, 999999] 
+Option tgrate: Only needed, if 'iform' is 'tg' and oform is 'bpf(s)'. Sample rate to convert time values from TextGrid to sample values in BAS partiture file.
+
+oform: [txt, tab, exttab, lex, extlex, bpf, bpfs, tcf, exttcf, tg, exttg] 
+Option oform: 'bpf' indicates the BAS Partitur Format (BPF) file with a KAN tier. The KAN tier contains a table with 3 columns and one line per word in the input. Column 1 is always 'KAN:'; column 2 is an integer starting with 0 denoting the word position within the input; column 3 contains the canonical pronunciation of the word coded in SAM-PA; this string does not contain blanks. 'bpfs' differs from 'bpf' only in that respect, that the phonemes are separated by blanks. In case of TextGrid input, both 'bpf' and 'bpfs' require the additional parameters 'tgrate' and 'tgitem'. The content of the TextGrid tier 'tgitem' is stored as a word chunk segmentation in the partiture tier TRN. 'txt' indicates a replacement of the input words by their transcriptions; single line output without punctuation, where phonemes are separated by blanks and words by tabulators. 'tab' returns the grapheme phoneme conversion result in form of a table with two columns.  The first column comprises the words, the second column their blank-separated transcriptions. 'exttab' results in a 5-column table. The columns contain from left to right: words, transcriptions, part of speech, morpheme segmentations, and morpheme class segmentations. 'lex' transforms the table to a lexicon, i.e. words are unique and sorted. 'extlex' provides the same information as 'exttab' in a unique and sorted manner. For all lex and tab outputs columns are separated by ';'.  If alignment is switched on, the first (word) column is letter-segmented.  If oform is set to 'tcf' either a tcf file is generated from scratch (in case iform is not 'tcf'), or a transcription tier is added to an existing tcf file. If a tcf file is generated from scratch it contains the elements 'text', 'tokens', and BAS_TRS for the transcription. 'exttcf' which is currently available for German and English only additionally adds part of speech (STTS tagset), morphs, and morph classes.  The new elements are called BAS_POS, BAS_MORPH, and BAS_MORPHCLASS, respectively.  By 'tg' and 'exttg' TextGrid output is produced. For this output a TextGrid input is required. With 'tg' the item BAS_TRS is inserted to the TextGrid which runs parallel to the item specified by the parameter 'tgitem'. Words are separated by an '#' symbol. With 'exttg' additionally the items BAS_POS, BAS_MORPH, and BAS_MORPHCLASS are inserted in analogy to BAS_TRS. Their content is the same as for 'exttcf'.  'exttab', 'extlex', 'exttcf', and 'exttg' are available for German and all English variants only. For the other languages these formats are replaced by the corresponding non-extended formats. While the output contains punctuation for 'exttab', 'tcf', 'exttcf', and 'exttg' for the other formats it is ignored.  
+
+map: [no, aus_sampa, deu_sampa, eng_sampa, hun_sampa, ita_sampa, nld_sampa, nze_sampa, pol_sampa, use_sampa, aus_ipa, deu_ipa, eng_ipa, fra_ipa, hun_ipa, ita_ipa, nld_ipa, nze_ipa, pol_ipa, aus_maus, deu_maus, eng_maus, fra_maus, hun_maus, ita_maus, nld_maus, nze_maus, pol_maus, use_maus, use_arpabet] 
+Option map: Mapping across phoneme sets. '[lng]_ipa' converts SAMPA to IPA. '[lng]_sampa' converts language-specific to language independent SAMPA. '[lng]_arpabet' converts to ARPABET, which is currently supported only for American English. If a bpf output file is to be created as input for the MAUS tool, -map is to be set to '[lng]_maus'! The latter is configured automatically if the 'embed' parameter is set to 'maus'. For [lng] RCFC5646 locale code and iso639-3 code are supported.
+
+featset: [standard, extended] 
+Option featset: Feature set used for grapheme-phoneme conversion. The standard set is the default and comprises a letter window centered on the grapheme to be converted. The extended set additionally includes part of speech and morphological analyses. The extended set is currently available for German and British English only. For connected text the extended feature set generally generally yields better performance. However, if the input comprises a high amount of proper names provoking erroneous part of speech tagging and morphologic analyses, than the standard feature set is more robust.
+
+tgitem: Option tgitem: Only needed, if 'iform' is 'tg'. Name of the TextGrid item, that contains the words to be transcribed. In case of TextGrid output, this item is the reference for the added items.
+
+Output: Depending on oform different file formats containing the canonical phonemic transcription in SAM-PA (segmented in words). A XML response containing the tags "success", "downloadLink", "output" and "warning. success states if the processing was successful or not, downloadLink specifies the location where the file containing the phonemic transcription in SAM-PA (segmented in words) can be found (the format of the file depends on the option selected in oform), output contains the output that is mostly useful during debugging errors and warnings if any warnings occured during the processing. The format of the output file depends on the value of input parameter OFORM.
+----------------------------------------------------------------
+----------------------------------------------------------------
+runMAUSGetHelp
+------------------
+Description: Returns the help of the MAUS tool on the server which describes the available parameters in more detail.
+
+Example curl call is:
+curl -v -X GET -H 'content-type: application/x-www-form-urlencoded' 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSGetHelp'
+
+
+Parameter description: 
+Output: Help message of the actual MAUS tool.
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+
+curl -v -X POST -H 'content-type: multipart/form-data'  -F OUTFORMAT=TextGrid -F NOINITIALFINALSILENCE=false -F INSKANTEXTGRID=true -F LANGUAGE=eng-US -F TEXT=@/Users/ZhaoweiTan/Documents/Courses/14-15_spring/machine_learning/project/curl/words.txt -F INSORTTEXTGRID=true -F USETRN=force -F SIGNAL=@/Users/ZhaoweiTan/Documents/Courses/14-15_spring/machine_learning/project/converted/english1.wav 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'

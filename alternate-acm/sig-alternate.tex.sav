@@ -1,0 +1,482 @@
+% This is "sig-alternate.tex" V1.9 April 2009
+% This file should be compiled with V2.4 of "sig-alternate.cls" April 2009
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.4 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.4) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V1.9 - April 2009
+
+\documentclass{sig-alternate}
+  \pdfpagewidth=8.5truein
+  \pdfpageheight=11truein
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{Machine Learning Course}{June, 2015, Shanghai, China.}
+\CopyrightYear{2015} % Allows default copyright year (2002) to be over-ridden - IF NEED BE.
+\crdata{}  % Allows default copyright data (X-XXXXX-XX-X/XX/XX) to be over-ridden.
+% --- End of Author Metadata ---
+
+\title{Native or Not? A Machine Learning Solution towards Judging A Person's Native Language}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor Zhaowei Tan\titlenote{This author is the
+one who did all the really hard work. All the codes, methods and approaches are written or designed by the author and his teammates (they formed the group who came up with this topic). I will EXPLICITLY POINT OUT when some work mentioned in the paper is not done by this author.}\\
+       \affaddr{5120309701}\\
+       \affaddr{IEEE Honor Class}\\
+       \affaddr{Shanghai Jiao Tong University}\\
+       \affaddr{Shanghai, China}\\
+       \email{tanzw94@gmail.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+
+\maketitle
+\begin{abstract}
+
+\end{abstract}
+
+
+
+\keywords{Machine Learning, Binary Classification, Speech Recognition}
+
+\section{Introduction}\footnote{*******************IMPORTANT*******************  Dear TA, some of my sentences here will seem familiar to you because it was I that mainly wrote the manual for anyone who wanted to do our project. So I claim the copyright of that document and hence simply reuse some of the words in that manual.}
+Many of us will apply for graduate schools in the near future. TOEFL score is indispensable for this process, and a higher score may increase your chances of being admitted. However, Chinese students tend to earn a low score in Speaking Task, which prohibits some top students from reaching the minimum requirements of their dream schools.
+
+It is from this point that our team developed our idea. We aim to build a system, via machine learning methods, to help us train the accent in order to achieve a higher TOEFL score. Considering that this goal is way too far from us, we start from a simple task, judging whether a piece of a recording is from a native speaker or not.
+
+The presented problem is in the field of speech recognition, which is among the hottest research areas in computer science field. Actually this is what our Dear Professors are currently working on. The speech recognition problems are rather hard, while some mature tools and methods have already been greatly developed.
+
+I took advantage of several speech recognition tools, as well as built-in machine learning libraries, to swiftly solve the problem with a decent accuracy. Unlike other two available projects, a considerable part of my work is the data processing.
+
+The paper is organized as follows. I give the sound description of the problem in Section 2. In Section 3, I present the process from which I get the data and process the data. In Section 4, multiple machine learning methods are proposed to solve the problem using the data we get. All the experimental results are shown in Section 5, after which I make discussions on the performance and elaborate possible future work in Section 6. Finally, I conclude this paper in Section 5.
+
+
+
+\section{Problem Description}
+The basic goal is a binary classification problem:
+\begin{quote}\emph{
+	Given a recording of a fixed script of English words, we would like to predict whether the speaker is a native English speaker or not.}
+\end{quote}
+
+Thus, given a unlabelled new data, I try to get as high a accuracy as problem. More specifically, we now possess a dataset $[X,Y]$. $X=[x_{1}^{T},x_{2}^{T},...,x_{n}^{T}]^{T}$, where $x_i$ is a recording from user $i$, speaking a given record. $Y=[y_1,y_2,...,y_n]^T$, where $y_i=1$ indicates that recording $i$ is from a native speaker while $y_i=0$ indicates that recording $i$ is from a non-native speaker (mandarin speaker in my case). I try to learn a model out of this dataset and use the model to predict whether a new recording belongs to a native, or a non-native speaker.
+
+As we can imagine, this function will vastly benefit English as a Second Language students and teachers, people who need to learn an accent, linguists who do research in this area and all the hosts whose services differ due to native language.
+
+
+
+
+\section{Data Acquisition and Processing}
+After I have defined the scope of this paper and the specific problem description, it is high time that I introduced the approach to get the data and handle the data. Actually, this is the most difficult and arduous part in the whole project, because for other tasks we can utilize the existing toolkits.
+
+In this section, I will go step by step, from getting data to handling the data, to illustrate the process of acquiring the information from scratch.
+\subsection{Data Crawling}
+Although the crawler has been provided in the FTP, I reiterate the issue here because I was the author of the crawler so hence I claim the authorship here. I use the crawler to crawl the data from the George Mason University Department of English Speech Accent Archive\cite{Lamport:LaTeX}. I do not own the data, and do not use the data for business purpose. All the credits of the data go to that university entity.
+
+\subsection{The Description of the Data}
+In the website, all the recordings are classified according to the speakers' native languages.
+
+I now have crawled the recordings of two categories, \emph{English} and \emph{Mandarin}, combing 620 clips together. More categories can be crawled by yourself further, which will be elaborated in Section 2.3.
+
+In each recording, every speaker will read the same English script:
+\begin{quote}\emph{
+Please call Stella. Ask her to bring these things with her from the store: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob. We also need a small plastic snake and a big toy frog for the kids. She can scoop these things into three red bags, and we will go meet her Wednesday at the train station.}
+\end{quote}
+
+In addition to the recording, I scrap the basic information of the speaking, including the native language, birth place (pinpointed to the province), other language spoken, age, sex, age of starting learning English, learning method, English residence (if has, the length of the residence). These data are collected into csv files which have been provided together with the recordings.
+
+A brief summary of the data can be found in the Table 1.
+
+\begin{table}[ht]
+\centering
+\caption{Data Description}
+\begin{tabular}{|c|c|c|} \hline
+&Mandarin&English\\ \hline
+\# of clips&561 &59 \\ \hline
+\# of features&11 &11 \\ \hline
+
+\end{tabular}
+\end{table}
+
+\subsection{Data Conversion}
+MATLAB and other program languages that are able to process audio prefer .wav than .mp3. Since the data we crawled were in .mp3 format, the data conversion is indispensable. Before I realize the MATLAB is really prompt to realize this, I used a free software on MacOS, MediaHuman Audio Converter to realize this. Thus I was able to convert all my raw data to .wav format.
+
+
+\subsection{MAUS Implementation}
+Since the audio are all about a same given paragraph, I utilized The Munich Automatic Segmentation System (MAUS) to segment the audio into pieces according to each word. This is an open source free software, which can take two inputs: audio and corresponding text, and output the audio segment corresponding to each word.\footnote{This function I use is MAUSBasic, actually it contains more advanced services, by which can make the training performance better.}
+
+This seemingly simple task is an real nightmare. Installing MAUS locally on the laptop is complicated and exhausting, which made me give up halfway.\footnote{My roommate, Lihang, actually took about a whole day to make that working.} As a result, i took advantage of the MAUS Webservices instead. Nevertheless this was still an exhausting which took me hours. \footnote{Sadly, this is proved to be useless effort in the end because my teammate, Zhichen, told me that WebMAUS, a MAUS service with interface can provide a easier interface of MAUS.}
+
+The alternative way I took is to write a PHP file to call the interface of MAUS Webservices. Figure 1 is a sample curl command to call the service, which will upload english1.wav to the server and run MAUSBasic online.
+
+
+\begin{figure}
+\centering
+\fbox{\includegraphics[scale = 0.35]{code.png}}
+\caption{A sample curl script to call MAUS.}
+\end{figure}
+
+Thus, I took advantage of PHP curl and write a PHP script to recursively upload my converted .wav file, let the server do the MAUS things and then fetch the output Textgrid. After having the given TextGrid, thanks to Jiaming, my teammate and who modified a python script, I can now handle the downloaded TextGrid and get the output .csv, which is good for MATLAB. Both the PHP and the Python files are provided\footnote{I share the PHP script with Jiaming so you might find this part in his report as well.}.
+
+\subsection{Read and Re-sample}
+The read and re-sample function is easy and has already been realized by Jiaming in start codes. However, some concerns still exist. One of them is that not every sample is recorded in an identical rate. Thus I need to read extra field, frequency, from the samples separately and use this extra data to do re-sample. Another problem is that how much should we re-sample each segment of a recording? For convenience, I re-sample the clips so that make MFCC for each segment shrinks to a single vector, instead of a Matrix. By deploying this approach, the vector space is greatly reduced, providing a faster learning process.
+
+
+\subsection{Trim the Vector}
+Due to the $Round$ function in the re-sample phase, the length of the re-sampled vector for each segment and each recording are not the same. So as to get a uniform feature vector, I trim every segment
+
+
+\subsection{MFCC Feature Extraction}
+
+
+\subsection{Re-construct the Matrix}
+
+
+
+
+
+\section{Learning Approaches}
+You may want to display math equations in three distinct styles:
+inline, numbered or non-numbered display.  Each of
+the three are discussed in the next sections.
+
+\subsubsection{Inline (In-text) Equations}
+A formula that appears in the running text is called an
+inline or in-text formula.  It is produced by the
+\textbf{math} environment, which can be
+invoked with the usual \texttt{{\char'134}begin. . .{\char'134}end}
+construction or with the short form \texttt{\$. . .\$}. You
+can use any of the symbols and structures,
+from $\alpha$ to $\omega$, available in
+\LaTeX\cite{Lamport:LaTeX}; this section will simply show a
+few examples of in-text equations in context. Notice how
+this equation: \begin{math}\lim_{n\rightarrow \infty}x=0\end{math},
+set here in in-line math style, looks slightly different when
+set in display style.  (See next section).
+
+\subsubsection{Display Equations}
+A numbered display equation -- one set off by vertical space
+from the text and centered horizontally -- is produced
+by the \textbf{equation} environment. An unnumbered display
+equation is produced by the \textbf{displaymath} environment.
+
+Again, in either environment, you can use any of the symbols
+and structures available in \LaTeX; this section will just
+give a couple of examples of display equations in context.
+First, consider the equation, shown as an inline equation above:
+\begin{equation}\lim_{n\rightarrow \infty}x=0\end{equation}
+Notice how it is formatted somewhat differently in
+the \textbf{displaymath}
+environment.  Now, we'll enter an unnumbered equation:
+\begin{displaymath}\sum_{i=0}^{\infty} x + 1\end{displaymath}
+and follow it with another numbered equation:
+\begin{equation}\sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f\end{equation}
+just to demonstrate \LaTeX's able handling of numbering.
+
+\subsection{Citations}
+Citations to articles \cite{bowman:reasoning,
+clark:pct, braams:babel, herlihy:methodology},
+conference proceedings \cite{clark:pct} or
+books \cite{salas:calculus, Lamport:LaTeX} listed
+in the Bibliography section of your
+article will occur throughout the text of your article.
+You should use BibTeX to automatically produce this bibliography;
+you simply need to insert one of several citation commands with
+a key of the item cited in the proper location in
+the \texttt{.tex} file \cite{Lamport:LaTeX}.
+The key is a short reference you invent to uniquely
+identify each work; in this sample document, the key is
+the first author's surname and a
+word from the title.  This identifying key is included
+with each item in the \texttt{.bib} file for your article.
+
+The details of the construction of the \texttt{.bib} file
+are beyond the scope of this sample document, but more
+information can be found in the \textit{Author's Guide},
+and exhaustive details in the \textit{\LaTeX\ User's
+Guide}\cite{Lamport:LaTeX}.
+
+This article shows only the plainest form
+of the citation command, using \texttt{{\char'134}cite}.
+This is what is stipulated in the SIGS style specifications.
+No other citation format is endorsed or supported.
+
+
+
+\section{Experimental Results}
+\subsection{Tables}
+Because tables cannot be split across pages, the best
+placement for them is typically the top of the page
+nearest their initial cite.  To
+ensure this proper ``floating'' placement of tables, use the
+environment \textbf{table} to enclose the table's contents and
+the table caption.  The contents of the table itself must go
+in the \textbf{tabular} environment, to
+be aligned properly in rows and columns, with the desired
+horizontal and vertical rules.  Again, detailed instructions
+on \textbf{tabular} material
+is found in the \textit{\LaTeX\ User's Guide}.
+
+Immediately following this sentence is the point at which
+Table 1 is included in the input file; compare the
+placement of the table here with the table in the printed
+dvi output of this document.
+
+\begin{table}
+\centering
+\caption{Frequency of Special Characters}
+\begin{tabular}{|c|c|l|} \hline
+Non-English or Math&Frequency&Comments\\ \hline
+\O & 1 in 1,000& For Swedish names\\ \hline
+$\pi$ & 1 in 5& Common in math\\ \hline
+\$ & 4 in 5 & Used in business\\ \hline
+$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+\hline\end{tabular}
+\end{table}
+
+To set a wider table, which takes up the whole width of
+the page's live area, use the environment
+\textbf{table*} to enclose the table's contents and
+the table caption.  As with a single-column table, this wide
+table will ``float" to a location deemed more desirable.
+Immediately following this sentence is the point at which
+Table 2 is included in the input file; again, it is
+instructive to compare the placement of the
+table here with the table in the printed dvi
+output of this document.
+
+
+\begin{table*}
+\centering
+\caption{Some Typical Commands}
+\begin{tabular}{|c|c|l|} \hline
+Command&A Number&Comments\\ \hline
+\texttt{{\char'134}alignauthor} & 100& Author alignment\\ \hline
+\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\ \hline
+\texttt{{\char'134}table}& 300 & For tables\\ \hline
+\texttt{{\char'134}table*}& 400& For wider tables\\ \hline\end{tabular}
+\end{table*}
+% end the environment with {table*}, NOTE not {table}!
+
+\subsection{Figures}
+Like tables, figures cannot be split across pages; the
+best placement for them
+is typically the top or the bottom of the page nearest
+their initial cite.  To ensure this proper ``floating'' placement
+of figures, use the environment
+\textbf{figure} to enclose the figure and its caption.
+
+This sample document contains examples of \textbf{.eps}
+and \textbf{.ps} files to be displayable with \LaTeX.  More
+details on each of these is found in the \textit{Author's Guide}.
+
+
+
+
+
+As was the case with tables, you may want a figure
+that spans two columns.  To do this, and still to
+ensure proper ``floating'' placement of tables, use the environment
+
+\subsection{Theorem-like Constructs}
+Other common constructs that may occur in your article are
+the forms for logical constructs like theorems, axioms,
+corollaries and proofs.  There are
+two forms, one produced by the
+command \texttt{{\char'134}newtheorem} and the
+other by the command \texttt{{\char'134}newdef}; perhaps
+the clearest and easiest way to distinguish them is
+to compare the two in the output of this sample document:
+
+This uses the \textbf{theorem} environment, created by
+the\linebreak\texttt{{\char'134}newtheorem} command:
+\newtheorem{theorem}{Theorem}
+\begin{theorem}
+Let $f$ be continuous on $[a,b]$.  If $G$ is
+an antiderivative for $f$ on $[a,b]$, then
+\begin{displaymath}\int^b_af(t)dt = G(b) - G(a).\end{displaymath}
+\end{theorem}
+
+The other uses the \textbf{definition} environment, created
+by the \texttt{{\char'134}newdef} command:
+\newdef{definition}{Definition}
+\begin{definition}
+If $z$ is irrational, then by $e^z$ we mean the
+unique number which has
+logarithm $z$: \begin{displaymath}{\log e^z = z}\end{displaymath}
+\end{definition}
+
+Two lists of constructs that use one of these
+forms is given in the
+\textit{Author's  Guidelines}.
+
+There is one other similar construct environment, which is
+already set up
+for you; i.e. you must \textit{not} use
+a \texttt{{\char'134}newdef} command to
+create it: the \textbf{proof} environment.  Here
+is a example of its use:
+\begin{proof}
+Suppose on the contrary there exists a real number $L$ such that
+\begin{displaymath}
+\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
+\end{displaymath}
+Then
+\begin{displaymath}
+l=\lim_{x\rightarrow c} f(x)
+= \lim_{x\rightarrow c}
+\left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
+= \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
+\frac{f(x)}{g(x)} = 0\cdot L = 0,
+\end{displaymath}
+which contradicts our assumption that $l\neq 0$.
+\end{proof}
+
+Complete rules about using these environments and using the
+two different creation commands are in the
+\textit{Author's Guide}; please consult it for more
+detailed instructions.  If you need to use another construct,
+not listed therein, which you want to have the same
+formatting as the Theorem
+or the Definition\cite{salas:calculus} shown above,
+use the \texttt{{\char'134}newtheorem} or the
+\texttt{{\char'134}newdef} command,
+respectively, to create it.
+
+\subsection*{A {\secit Caveat} for the \TeX\ Expert}
+Because you have just been given permission to
+use the \texttt{{\char'134}newdef} command to create a
+new form, you might think you can
+use \TeX's \texttt{{\char'134}def} to create a
+new command: \textit{Please refrain from doing this!}
+Remember that your \LaTeX\ source code is primarily intended
+to create camera-ready copy, but may be converted
+to other forms -- e.g. HTML. If you inadvertently omit
+some or all of the \texttt{{\char'134}def}s recompilation will
+be, to say the least, problematic.
+
+\section{Conclusions}
+This paragraph will end the body of this sample document.
+Remember that you might still have Acknowledgments or
+Appendices; brief samples of these
+follow.  There is still the Bibliography to deal with; and
+we will make a disclaimer about that here: with the exception
+of the reference to the \LaTeX\ book, the citations in
+this paper are to articles which have nothing to
+do with the present subject and are used as
+examples only.
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional
+\section{Acknowledgments}
+This section is optional; it is a location for you
+to acknowledge grants, funding, editing assistance and
+what have you.  In the present case, for example, the
+authors would like to thank Gerald Murray of ACM for
+his help in codifying this \textit{Author's Guide}
+and the \textbf{.cls} and \textbf{.tex} files that it describes.
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+\end{document}

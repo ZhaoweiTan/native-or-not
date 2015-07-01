@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{convert}
+Mediahuman audio converter.
+\newblock http://www.mediahuman.com/audio-converter/.
+
+\bibitem{mfcc}
+jameslyons.
+\newblock Mel frequency cepstral coefficient (mfcc) tutorial.
+\newblock
+  http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/.
+
+\bibitem{bs}
+L.~Richardson.
+\newblock Mediahuman audio converter.
+\newblock http://www.crummy.com/software/BeautifulSoup/.
+
+\bibitem{maus}
+F.~Schiel.
+\newblock The munich automatic segmentation system.
+\newblock http://www.bas.uni-muenchen.de/Bas/BasMAUS.html.
+
+\bibitem{accent}
+S.~Weinberger.
+\newblock Speech accent archive.
+\newblock http://accent.gmu.edu/, 2015.
+
+\end{thebibliography}

@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {1.1}Motivation}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {1.2}The Basic Goal}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {1.3}Significance}{3}
+\contentsline {section}{\numberline {2}The Dataset}{4}
+\contentsline {subsection}{\numberline {2.1}Source of the Data}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {subsection}{\numberline {2.2}The Discription of the Data}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {subsection}{\numberline {2.3}The Crawler}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {3}How to Start}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {3.1}Directionary Structure}{6}
+\contentsline {subsection}{\numberline {3.2}Components}{6}
+\contentsline {section}{\numberline {4}Some Tips}{7}
+\contentsline {subsection}{\numberline {4.1}Additional Resources}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {4.2}Advanced Tasks}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {4.3}Contact}{7}
+\contentsline {paragraph}{}{7}
