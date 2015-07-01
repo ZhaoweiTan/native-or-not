@@ -1,0 +1,562 @@
+Number,ID,Birth Place,Native Language,Other Language(s),Age,Sex,Age of Onset,Learning Method,English Residence,Length of Residence
+1,61,"pittsburgh, pennsylvania, usa",english,mandarin ,42,male,0,naturalistic,usa,41 years
+2,77,"birmingham, uk",english,german mandarin ,30,female,0,naturalistic,uk,30 years
+3,88,"brisbane, australia",english,none,26,female,0,naturalistic,australia,26 years
+4,99,"saint anne's bay, jamaica",english,spanish french ,53,female,0,naturalistic,"jamaica,usa",53 years
+5,110,"fairfax, virginia, usa",english,none,62,male,0,naturalistic,usa,62 years
+6,121,"brooklyn, new york, usa",english,french spanish ,45,female,0,naturalistic,usa,45 years
+7,132,"macon, mississippi, usa",english,spanish french ,52,male,0,naturalistic,usa,52 years
+8,143,"perth, australia",english,french ,21,female,0,naturalistic,"australia,usa",4 years
+9,154,"carthage, texas, usa",english,spanish ,48,female,0,naturalistic,usa,48 years
+10,62,"davenport, iowa, usa",english,none,35,female,0,naturalistic,usa,35 years
+11,68,"staffordshire, uk",english,french ,35,female,0,naturalistic,uk,35 years
+12,69,"leicester, uk",english,french ,71,female,0,naturalistic,uk,71 years
+13,70,"henley on thames, oxfordshire, uk",english,none,69,male,0,naturalistic,uk,69 years
+14,71,"belfast, northern ireland, uk",english,french ,40,male,0,naturalistic,"uk,usa",40 years
+15,72,"norton, virginia, usa",english,none,7,female,0,naturalistic,usa,7 years
+16,73,"wise, virginia, usa",english,spanish ,21,male,0,naturalistic,usa,21 years
+17,74,"darwin va, virginia, usa",english,none,79,male,0,naturalistic,usa,79 years
+18,75,"dickenson county, virginia, usa",english,none,39,female,0,naturalistic,usa,39 years
+19,76,"louisville, kentucky, usa",english,spanish ,53,male,0,naturalistic,usa,53 years
+20,78,"mt. holly, north carolina, usa",english,none,27,female,0,naturalistic,usa,27 years
+21,79,"boston, massachusetts, usa",english,italian ,37,female,0,naturalistic,usa,37 years
+22,80,"panama city, panama",english,spanish ,25,female,0,naturalistic,usa,5 years
+23,81,"englewood, tennessee, usa",english,none,43,male,0,naturalistic,usa,43 years
+24,82,"glasgow, scotland, uk",english,french ,37,male,0,naturalistic,"uk,usa",37 years
+25,83,"atlanta, georgia, usa",english,none,57,male,0,naturalistic,usa,57 years
+26,84,"smith island, maryland, usa",english,none,71,male,0,naturalistic,usa,71 years
+27,85,"smith island, maryland, usa",english,none,37,female,0,naturalistic,usa,37 years
+28,86,"toronto, ontario, canada",english,french russian ,54,male,0,naturalistic,canada,54 years
+29,87,"lindsay, ontario, canada",english,none,54,female,0,naturalistic,canada,54 years
+30,89,"st. mary's, ontario, canada",english,french swedish ,30,female,0,naturalistic,canada,30 years
+31,90,"st. augustine, trinidad",english,none,31,female,0,naturalistic,"trinidad,usa",31 years
+32,91,"fresno, california, usa",english,none,50,female,0,naturalistic,usa,50 years
+33,92,"san diego, california, usa",english,none,21,male,0,naturalistic,usa,21 years
+34,93,"ronkonkoma, new york, usa",english,french ,18,female,0,naturalistic,usa,18 years
+35,94,"milwaukee, wisconsin, usa",english,spanish ,60,female,0,naturalistic,usa,60 years
+36,95,"arcadia, wisconsin, usa",english,none,60,male,0,naturalistic,usa,60 years
+37,96,"yole, india",english,hindi-urdu french ,28,female,0,naturalistic,usa,7 years
+38,97,"littlehampton, uk",english,none,27,male,0,naturalistic,uk,27 years
+39,98,"new orleans, louisiana, usa",english,none,59,female,0,naturalistic,usa,59 years
+40,100,"dudley, uk",english,none,53,male,0,naturalistic,uk,53 years
+41,101,"wellington, new zealand",english,hebrew french ,44,male,0,naturalistic,new zealand,21 years
+42,102,"nigel, south africa",english,afrikaans zulu ,65,male,0,naturalistic,south africa,60 years
+43,103,"vancouver, british columbia, canada",english,none,47,male,0,naturalistic,canada,47 years
+44,104,"winston salem, north carolina, usa",english,spanish french ,63,female,0,naturalistic,usa,63 years
+45,105,"pine bluff, arkansas, usa",english,none,52,male,0,naturalistic,usa,52 years
+46,106,"creswell, north carolina, usa",english,none,73,male,0,naturalistic,usa,73 years
+47,107,"plantersville, arkansas, usa",english,none,76,female,0,naturalistic,usa,76 years
+48,108,"port moresby, national capital district, papua new guinea",english,tok pisin igbo ,26,male,0,naturalistic,"papua new guinea,uk,usa",26 years
+49,109,"castro valley, california, usa",english,none,43,male,0,naturalistic,usa,43 years
+50,111,"baltic, south dakota, usa",english,french ,29,female,0,naturalistic,usa,29 years
+51,112,"detroit, michigan, usa",english,italian ,67,male,0,naturalistic,usa,67 years
+52,113,"calgary, alberta, canada",english,none,20,male,0,naturalistic,"canada, usa",20 years
+53,114,"syracuse, new york, usa",english,none,63,male,0,naturalistic,usa,63 years
+54,115,"new albany, indiana, usa",english,none,40,female,0,naturalistic,usa,40 years
+55,116,"st. louis, missouri, usa",english,none,53,female,0,naturalistic,usa,53 years
+56,117,"londonderry, northern ireland, uk",english,ulster scots ,20,male,0,naturalistic,northern ireland,20 years
+57,118,"birmingham 1, uk",english,french spanish ,34,male,0,naturalistic,"uk,canada",34 years
+58,119,"southhampton, uk",english,none,46,female,0,naturalistic,"uk,usa",16 years
+59,120,"columbus, ohio, usa",english,greek german ,30,male,0,naturalistic,usa,30 years
+60,122,"chesapeake, virginia, usa",english,none,18,male,0,naturalistic,usa,18 years
+61,123,"toronto, ontario, canada",english,none,19,male,0,naturalistic,canada,19 years
+62,124,"west jordan, utah, usa",english,none,30,male,0,naturalistic,usa,30 years
+63,125,"lewisville, texas, usa",english,spanish ,21,male,0,naturalistic,usa,21 years
+64,126,"montreal, quebec, canada",english,french ,25,female,0,naturalistic,canada,25 years
+65,127,"lewistown, pennsylvania, usa",english,none,47,male,0,naturalistic,usa,47 years
+66,128,"baltimore, maryland, usa",english,none,19,male,0,naturalistic,usa,19 years
+67,129,"princeton, indiana, usa",english,french ,37,male,0,naturalistic,usa,37 years
+68,130,"new york, new york, usa",english,none,52,male,0,naturalistic,usa,52 years
+69,131,"adelaide, australia",english,korean ,23,male,0,naturalistic,australia,23 years
+70,133,"beaumont, texas, usa",english,none,21,male,0,naturalistic,usa,21 years
+71,134,"west covina, california, usa",english,none,20,male,0,naturalistic,usa,20 years
+72,135,"kilkenny, ireland",english,irish ,31,male,0,naturalistic,ireland,31 years
+73,136,"darwin, australia",english,none,24,male,0,naturalistic,australia,24 years
+74,137,"wichita, kansas, usa",english,spanish ,21,male,0,naturalistic,usa,21 years
+75,138,"idaho falls, idaho, usa",english,none,32,male,0,naturalistic,usa,32 years
+76,139,"boston, massachusetts, usa",english,french spanish hebrew ,18,female,0,naturalistic,usa,18 years
+77,140,"melbourne, australia",english,japanese ,26,male,0,naturalistic,australia,26 years
+78,141,"caribou, maine, usa",english,french ,20,female,0,naturalistic,usa,20 years
+79,142,"boston, massachusetts, usa",english,none,73,male,0,naturalistic,usa,73 years
+80,144,"glasgow, scotland, uk",english,none,34,male,0,naturalistic,"uk, canada",34 years
+81,145,"st. paul, minnesota, usa",english,spanish ,30,male,0,naturalistic,usa,30 years
+82,146,"chicago, illinois, usa",english,none,50,female,0,naturalistic,usa,50 years
+83,147,"winnfield, louisiana, usa",english,french ,42,female,0,naturalistic,usa,42 years
+84,148,"sydney, australia",english,tok pisin ,45,male,0,naturalistic,australia,45 years
+85,149,"strabane, northern ireland, uk",english,none,31,male,0,naturalistic,uk,31 years
+86,150,"charleston, south carolina, usa",english,spanish ,50,male,0,naturalistic,usa,50 years
+87,151,"tamworth, australia",english,esperanto german ,18,female,0,naturalistic,australia,18 years
+88,152,"grand rapids, michigan, usa",english,none,18,male,0,naturalistic,usa,18 years
+89,153,"kingston ma, massachusetts, usa",english,spanish ,18,male,0,naturalistic,usa,18 years
+90,155,"pittsburgh, pennsylvania, usa",english,none,53,male,0,naturalistic,usa,53 years
+91,156,"kingston, jamaica",english,patois ,23,male,0,naturalistic,jamaica,23 years
+92,157,"wisconsin rapids, wisconsin, usa",english,none,22,female,0,naturalistic,usa,22 years
+93,158,"mamou, louisiana, usa",english,none,22,female,0,naturalistic,usa,22 years
+94,159,"pensacola, florida, usa",english,none,55,female,0,naturalistic,usa,55 years
+95,160,"mishawaka, indiana, usa",english,none,18,male,0,naturalistic,usa,18 years
+96,161,"point pleasant, new jersey, usa",english,russian ,31,male,0,naturalistic,usa,31 years
+97,162,"wilmington nc, north carolina, usa",english,spanish ,42,male,0,naturalistic,usa,42 years
+98,163,"spokane, washington, usa",english,spanish ,22,male,0,naturalistic,usa,22 years
+99,164,"pittsburgh, pennsylvania, usa",english,french spanish ,52,female,0,naturalistic,usa,52 years
+100,63,"miami, florida, usa",english,none,23,female,0,naturalistic,usa,23 years
+101,64,"toronto, ontario, canada",english,french mandarin ,18,female,0,naturalistic,canada,18 years
+102,65,"torrington, connecticut, usa",english,none,22,male,0,naturalistic,usa,22 years
+103,66,"staten island, new york, usa",english,german ,21,male,0,naturalistic,usa,21 years
+104,67,"youngstown, ohio, usa",english,spanish ,18,female,0,naturalistic,usa,18 years
+105,407,"windsor, ontario, canada",english,none,57,male,0,naturalistic,canada,57 years
+106,408,"los angeles, california, usa",english,spanish ,39,female,0,naturalistic,usa,39 years
+107,416,"chicago, illinois, usa",english,spanish ,19,male,0,naturalistic,usa,19 years
+108,419,"strabane, northern ireland, uk",english,dutch french german spanish ,21,male,0,naturalistic,uk,21.5 years
+109,420,"concord, new hampshire, usa",english,irish ,26,female,0,naturalistic,usa,26 years
+110,421,"great yarmouth, norfolk, uk",english,japanese ,21,male,0,naturalistic,uk,0 years
+111,426,"bombay, india",english,hindi-urdu french ,21,male,0,naturalistic,"india, usa",4 years
+112,427,"st. thomas, us virgin islands",english,french ,21,male,0,naturalistic,us virgin islands,21 years
+113,439,"wrexham, wales, uk",english,french welsh ,31,male,0,naturalistic,"wales, australia",31 years
+114,442,"birmingham 2, alabama, usa",english,none,38,female,0,naturalistic,usa,38 years
+115,443,"st. albans, hertfordshire, uk",english,none,31,male,0,naturalistic,uk,31 years
+116,444,"atlanta, georgia, usa",english,none,56,male,0,naturalistic,usa,56 years
+117,445,"elmore, alabama, usa",english,none,60,female,0,naturalistic,usa,60 years
+118,446,"akron, ohio, usa",english,none,19,male,0,naturalistic,usa,17 years
+119,455,"saskatoon, saskatchewan, canada",english,none,32,female,0,naturalistic,canada,32 years
+120,456,"saskatoon, saskatchewan, canada",english,german ,65,male,0,naturalistic,canada,65 years
+121,465,"waconia, minnesota, usa",english,french ,21,male,0,naturalistic,usa,21 years
+122,468,"kuala lumpur, malaysia",english,mandarin japanese ,20,female,0,naturalistic,"singapore,usa",13 years
+123,469,"riverside, california, usa",english,none,28,female,0,naturalistic,"usa, uk",23 years
+124,480,"brooklyn, new york, usa",english,none,38,male,0,naturalistic,usa,38 years
+125,485,"st. george, queensland, australia",english,none,28,male,0,naturalistic,australia,28 years
+126,487,"cincinnati, ohio, usa",english,spanish ,34,female,0,naturalistic,usa,34 years
+127,489,"new britain, connecticut, usa",english,none,39,male,0,naturalistic,usa,39 years
+128,490,"miami, florida, usa",english,french ,20,female,0,naturalistic,usa,20 years
+129,492,"blackpool, lancashire, uk",english,korean indonesian polish french ,25,male,0,naturalistic,"uk, australia",25 years
+130,496,"port elizabeth, south africa",english,afrikaans ,32,male,0,naturalistic,south africa,32 years
+131,497,"west palm beach, florida, usa",english,none,23,male,0,naturalistic,usa,23 years
+132,503,"toronto, ontario, canada",english,none,18,female,0,naturalistic,canada,18 years
+133,504,"norwich, new york, usa",english,spanish ,36,female,0,naturalistic,usa,36 years
+134,506,"belfast, northern ireland, uk",english,french ,22,female,0,naturalistic,uk,22 years
+135,507,"orange beach, alabama, usa",english,none,22,male,0,naturalistic,usa,22 years
+136,508,"calgary, alberta, canada",english,none,25,male,0,naturalistic,canada,25 years
+137,509,"charleston, west virginia, usa",english,japanese ,26,male,0,naturalistic,usa,26 years
+138,510,"palmer, alaska, usa",english,german ,25,female,0,naturalistic,usa,25 years
+139,511,"providence, rhode island, usa",english,none,20,male,0,naturalistic,usa,20 years
+140,515,"quezon city, philippines",english,tagalog ,43,male,0,naturalistic,"philippines,canada",43 years
+141,516,"york, uk",english,french german ,19,male,0,naturalistic,uk,19 years
+142,517,"avon, new york, usa",english,french ,19,male,0,naturalistic,usa,19 years
+143,518,"minneapolis, minnesota, usa",english,french ,42,male,0,naturalistic,"usa, uk",42 years
+144,519,"barneys river, nova scotia, canada",english,spanish ,24,male,0,naturalistic,canada,24 years
+145,521,"bury st. edmunds, uk",english,none,18,male,0,naturalistic,uk,13 years
+146,522,"blytheville, arkansas, usa",english,spanish ,22,male,0,naturalistic,usa,22 years
+147,523,"merced, california, usa",english,portuguese ,40,female,0,naturalistic,usa,40 years
+148,525,"sydney, australia",english,none,31,male,0,naturalistic,australia,31 years
+149,526,"lawrenceville, georgia, usa",english,none,18,male,0,naturalistic,usa,18 years
+150,527,"brownsville, kentucky, usa",english,spanish ,31,male,0,naturalistic,usa,31 years
+151,528,"baltimore, maryland, usa",english,spanish ,18,male,0,naturalistic,usa,18 years
+152,529,"adelaide, australia",english,none,18,male,0,naturalistic,australia,18 years
+153,533,"brisbane, australia",english,none,35,male,0,naturalistic,australia,35 years
+154,534,"glace bay, nova scotia, canada",english,none,28,male,0,naturalistic,canada,28 years
+155,535,"oakland, california, usa",english,none,35,male,0,naturalistic,usa,35 years
+156,536,"dublin, ireland",english,mandarin french irish ,33,male,0,naturalistic,ireland,33 years
+157,538,"fort worth, texas, usa",english,none,35,male,0,naturalistic,usa,35 years
+158,540,"washington, district of columbia, usa",english,spanish german ,18,female,0,naturalistic,usa,18 years
+159,541,"ottawa, ontario, canada",english,none,18,male,0,naturalistic,canada,18 years
+160,542,"redwood falls, minnesota, usa",english,none,21,female,0,naturalistic,usa,21 years
+161,546,"wakefield, ohio, usa",english,none,75,female,0,naturalistic,usa,75 years
+162,548,"delaware, ohio, usa",english,none,41,female,0,naturalistic,usa,39 years
+163,547,"fairview park, ohio, usa",english,german dutch ,41,male,0,naturalistic,usa,39 years
+164,549,"leeds, uk",english,none,38,male,0,naturalistic,uk,38 years
+165,550,"detroit, michigan, usa",english,french spanish german ,43,female,0,naturalistic,usa,43 years
+166,551,"glenside, pennsylvania, usa",english,spanish ,18,male,0,naturalistic,usa,18 years
+167,552,"lakeview, michigan, usa",english,spanish ,43,male,0,naturalistic,usa,43 years
+168,554,"oceanside, california, usa",english,german ,40,male,0,naturalistic,usa,25 years
+169,555,"cleveland, mississippi, usa",english,spanish esperanto ,18,male,0,naturalistic,usa,18 years
+170,556,"belmont, mississippi, usa",english,none,50,female,0,naturalistic,usa,50 years
+171,563,"st. louis, missouri, usa",english,french spanish italian ,21,male,0,naturalistic,usa,21 years
+172,564,"kingston, jamaica",english,none,49,male,0,naturalistic,"jamaica, uk",49 years
+173,567,"libertyville, illinois, usa",english,none,19,male,0,naturalistic,usa,19 years
+174,568,"kuching, sarawak, malaysia",english,malay chinese ,30,female,0,naturalistic,"australia, singapore",12 years
+175,572,"seattle, washington, usa",english,mandarin ,24,male,0,naturalistic,usa,21 years
+176,573,"elizabeth city, north carolina, usa",english,spanish french afrikaans ,18,female,0,naturalistic,usa,18 years
+177,574,"new orleans, louisiana, usa",english,none,23,female,0,naturalistic,usa,23 years
+178,583,"wilkes-barre, pennsylvania, usa",english,none,30,male,0,naturalistic,usa,30 years
+179,584,"huron, south dakota, usa",english,german russian ,57,male,0,naturalistic,usa,55 years
+180,585,"newport, rhode island, usa",english,none,20,male,0,naturalistic,usa,20 years
+181,586,"new eagle, pennsylvania, usa",english,none,68,male,0,naturalistic,usa,68 years
+182,590,"troy, new york, usa",english,italian spanish ,50,male,0,naturalistic,usa,50 years
+183,595,"corriverton, guyana",english,hindi ,55,female,0,naturalistic,"guyana, usa",55 years
+184,597,"hillsboro, oregon, usa",english,spanish ,18,female,0,naturalistic,usa,18 years
+185,604,"oxford, uk",english,spanish ,38,male,0,naturalistic,canada,36 years
+186,605,"gadsden, alabama, usa",english,none,39,female,0,naturalistic,usa,39 years
+187,606,"algona, iowa, usa",english,none,42,female,0,naturalistic,usa,42 years
+188,611,"edinburgh, scotland, uk",english,none,35,male,0,naturalistic,uk,35 years
+189,617,"grand forks, north dakota, usa",english,none,19,male,0,naturalistic,usa,19 years
+190,618,"oak park, illinois, usa",english,spanish koine greek ,27,male,0,naturalistic,usa,28 years
+191,631,"las cruces, new mexico, usa",english,mandarin russian german ,19,male,0,naturalistic,usa,19 years
+192,636,"east lansing, michigan, usa",english,none,27,female,0,naturalistic,usa,27 years
+193,637,"honolulu, hawaii, usa",english,none,32,male,0,naturalistic,usa,32 years
+194,638,"manchester, england, uk",english,none,19,male,0,naturalistic,uk,19 years
+195,639,"delavan, wisconsin, usa",english,french russian german norwegian ,21,female,0,naturalistic,usa,21 years
+196,654,"suva, fiji",english,fijian hindi french ,50,female,0,naturalistic,"fiji, usa",50 years
+197,662,"iowa city, iowa, usa",english,none,22,male,0,naturalistic,usa,22 years
+198,663,"washington, district of columbia, usa",english,none,56,male,0,naturalistic,usa,56 years
+199,664,"bay shore, new york, usa",english,none,25,male,0,naturalistic,usa,25 years
+200,667,"berkeley, california, usa",english,spanish ,22,female,0,naturalistic,usa,22 years
+201,668,"warren, michigan, usa",english,polish ,26,female,0,naturalistic,usa,26 years
+202,673,"crisfield, maryland, usa",english,esperanto ,19,male,0,naturalistic,usa,19 years
+203,674,"boston, massachusetts, usa",english,german french ,63,female,0,naturalistic,usa,31 years
+204,678,"chicago, illinois, usa",english,french german ,53,male,0,naturalistic,usa,49 years
+205,679,"blue earth, minnesota, usa",english,none,45,female,0,naturalistic,usa,45 years
+206,680,"hucknall, nottinghamshire, england, uk",english,slovenian ,35,female,0,naturalistic,uk,35 years
+207,684,"wilkes-barre, pennsylvania, usa",english,spanish ,23,female,0,naturalistic,usa,23 years
+208,695,"washington, dc, usa",english,none,46,male,0,naturalistic,usa,29 years
+209,702,"saint johns, antigua and barbuda",english,antigua and barbuda creole english french ,28,female,0,naturalistic,"antigua and barbuda, usa",28 years
+210,705,"trenton, nova scotia, canada",english,french ,23,female,0,naturalistic,canada,23 years
+211,720,"worcester, massachusetts, usa",english,none,30,male,0,naturalistic,usa,30 years
+212,729,"spartanburg, south carolina, usa",english,none,24,male,0,naturalistic,usa,24 years
+213,734,"dodge city, kansas, usa",english,none,38,male,0,naturalistic,usa,38 years
+214,737,"myrtle beach, south carolina, usa",english,spanish ,26,male,0,naturalistic,usa,26 years
+215,738,"lemington spa, warwickshire, uk",english,spanish italian yiddish ,20,male,0,naturalistic,"uk, ireland, usa",20 years
+216,739,"chicago, illinois, usa",english,spanish ,48,female,0,naturalistic,usa,48 years
+217,740,"harrow, middlesex, uk",english,french german spanish italian japanese ,66,male,0,naturalistic,"uk, usa",66 years
+218,747,"abingdon, virginia, usa",english,latin spanish ,27,female,0,naturalistic,usa,27 years
+219,748,"oakland, california, usa",english,spanish ,38,female,0,naturalistic,usa,38 years
+220,749,"anaheim, california, usa",english,none,18,female,0,naturalistic,usa,18 years
+221,754,"london, uk",english,yoruba ,45,male,0,naturalistic,"uk, australia, usa",45 years
+222,764,"auburn, indiana, usa",english,none,18,female,0,naturalistic,usa,18 years
+223,767,"erie, pennsylvania, usa",english,none,18,male,0,naturalistic,usa,18 years
+224,768,"bridgetown, barbados",english,spanish french ,20,male,0,naturalistic,barbados,20 years
+225,771,"dundee, scotland, uk",english,italian ,50,male,0,naturalistic,"scotland, usa",50 years
+226,772,"walton-on-thames, surrey, uk",english,none,38,male,0,naturalistic,"uk, usa",38 years
+227,773,"camberley, surrey, uk",english,none,42,female,0,naturalistic,"uk, usa",42 years
+228,774,"glasgow, scotland, uk",english,french german krio ,59,female,0,naturalistic,"scotland, usa, sierra leone",59 years
+229,775,"burlington, vermont, usa",english,french ,25,male,0,naturalistic,usa,25 years
+230,776,"launceston, tasmania, australia",english,none,35,male,0,naturalistic,australia,35 years
+231,791,"tampa, florida, usa",english,spanish ,22,male,0,naturalistic,usa,22 years
+232,798,"metairie, louisiana, usa",english,italian spanish ,32,female,0,naturalistic,usa,32 years
+233,793,"edmonton, alberta, canada",english,french ,26,female,0,naturalistic,canada,26 years
+234,794,"bloomington, indiana, usa",english,portuguese spanish american sign language ,49,male,0,naturalistic,usa,49 years
+235,795,"richmond, virginia, usa",english,spanish ,52,female,0,naturalistic,usa,52 years
+236,799,"st. charles, illinois, usa",english,german french ,44,male,0,naturalistic,usa,34 years
+237,801,"jeffersonville, ohio, usa",english,spanish ,22,female,0,naturalistic,usa,22 years
+238,802,"vancouver, british  columbia, canada",english,german french japanese ,21,female,0,naturalistic,canada,21 years
+239,803,"fort kobbe, panama",english,japanese punjabi ,19,male,0,naturalistic,usa,18 years
+240,815,"guelph, ontario, canada",english,french ,26,male,0,naturalistic,canada,26 years
+241,817,"wanganui, new zealand",english,italian portuguese ,52,female,0,naturalistic,new zealand,29 years
+242,818,"laurel, mississippi, usa",english,none,77,female,0,naturalistic,usa,77 years
+243,820,"fredericton, new brunswick, canada",english,french ,27,male,0,naturalistic,canada,27 years
+244,821,"san francisco, california, usa",english,spanish ,23,male,0,naturalistic,usa,13 years
+245,824,"pittsburgh, pennsylvania, usa",english,japanese spanish ,25,male,0,naturalistic,usa,22 years
+246,825,"los angeles, california, usa",english,none,32,male,0,naturalistic,usa,32 years
+247,835,"prince rupert, british columbia, canada",english,japanese ,33,male,0,naturalistic,canada,25 years
+248,840,"philadelphia, pennsylvania, usa",english,french ,18,female,0,naturalistic,usa,18 years
+249,850,"boston, massachusetts, usa",english,spanish ,29,female,0,naturalistic,usa,29 years
+250,852,"chester, england, uk",english,none,19,male,0,naturalistic,uk,19 years
+251,855,"mt. kisco, new york, usa",english,french spanish italian japanese ,21,male,0,naturalistic,usa,21 years
+252,856,"san jose ca, california, usa",english,german ,25,female,0,naturalistic,usa,25 years
+253,857,"dublin, ireland",english,gaelic french ,21,male,0,naturalistic,ireland,21 years
+254,858,"eugene, oregon, usa",english,spanish ,39,male,0,naturalistic,usa,39 years
+255,859,"oamaru, new zealand",english,cantonese japanese ,24,female,0,naturalistic,new zealand,24 years
+256,861,"laurinburg, north carolina, usa",english,none,23,male,0,naturalistic,usa,23 years
+257,863,"san diego, california, usa",english,none,24,male,0,naturalistic,usa,24 years
+258,869,"kilkenny, ireland",english,irish french german dutch spanish ,24,male,0,naturalistic,ireland,23 years
+259,870,"singapore, singapore",english,mandarin cantonese hokkien ,23,male,0,naturalistic,singapore,23 years
+260,871,"phoenix, arizona, usa",english,none,18,female,0,naturalistic,usa,18 years
+261,875,"forestville, maryland, usa",english,spanish ,59,female,0,naturalistic,usa,59 years
+262,876,"naylor, maryland, usa",english,german ,60,male,0,naturalistic,usa,60 years
+263,884,"oak forest, illinois, usa",english,spanish ,21,male,0,naturalistic,usa,21 years
+264,889,"freemont, california, usa",english,french german ,21,male,0,naturalistic,usa,21 years
+265,890,"vancouver wa, washington, usa",english,korean german ,31,male,0,naturalistic,usa,27 years
+266,899,"san diego, california, usa",english,french spanish ,18,male,0,,usa,18 years
+267,900,"leeds, uk",english,french ,66,male,0,naturalistic,uk,66 years
+268,901,"leeds, uk",english,french german ,67,female,0,naturalistic,uk,67 years
+269,902,"adelaide, australia",english,french ,22,female,0,naturalistic,"australia, uk, usa",22 years
+270,903,"cape town, south africa",english,afrikaans french ,29,male,0,naturalistic,south africa,29 years
+271,904,"cape town, south africa",english,afrikaans french ,32,female,0,naturalistic,south africa,32 years
+272,905,"dallas, texas, usa",english,spanish ,20,male,0,naturalistic,usa,20 years
+273,907,"blue bell, pennsylvania, usa",english,german ,46,male,0,naturalistic,usa,46 years
+274,909,"sydney, australia",english,hokkien mandarin ,25,female,0,naturalistic,australia,25 years
+275,912,"clifton, new jersey, usa",english,none,20,female,0,naturalistic,usa,20 years
+276,918,"chattanooga, tennessee, usa",english,none,50,female,0,naturalistic,usa,50 years
+277,919,"hudson, new york, usa",english,german ,48,female,0,naturalistic,usa,42 years
+278,921,"augusta, georgia, usa",english,none,18,female,0,naturalistic,usa,18 years
+279,922,"singapore, singapore",english,mandarin hainanese ,30,female,0,naturalistic,singapore,30 years
+280,935,"ramsey, isle of man",english,none,19,female,0,naturalistic,isle of man,19 years
+281,937,"ramsey mn, minnesota, usa",english,french ,23,male,0,naturalistic,usa,23 years
+282,939,"tampa, florida, usa",english,none,20,male,0,naturalistic,usa,20 years
+283,951,"pelham, new york, usa",english,spanish ,18,male,0,naturalistic,usa,18 years
+284,952,"gainesville, florida, usa",english,spanish ,33,male,0,naturalistic,usa,33 years
+285,961,"melbourne, australia",english,none,50,male,0,naturalistic,"australia, hong kong, usa",50 years
+286,977,"beaumont, texas, usa",english,french latin hebrew spanish ,21,female,0,naturalistic,usa,21 years
+287,981,"singapore, singapore",english,cantonese mandarin japanese ,27,female,0,naturalistic,singapore,27 years
+288,982,"st. louis, missouri, usa",english,none,26,female,0,naturalistic,usa,26 years
+289,983,"fairfax, virginia, usa",english,italian spanish latin french ,19,female,0,naturalistic,usa,19 years
+290,986,"duluth, georgia, usa",english,none,20,male,0,naturalistic,usa,20 years
+291,1026,"belize city, belize",english,spanish creole dutch ,18,male,0,naturalistic,"belize, usa",18 years
+292,1051,"kansas city, missouri, usa",english,none,38,male,0,naturalistic,usa,38 years
+293,1052,"billings, montana, usa",english,none,22,female,0,naturalistic,usa,22 years
+294,1060,"naracoorte, australia",english,indonesian french ,19,female,0,naturalistic,"australia, usa",19 years
+295,1067,"airdrie, alberta, canada",english,french german italian ,25,male,0,naturalistic,canada,25 years
+296,1070,"edmonton, alberta, canada",english,french ,18,female,0,naturalistic,canada,18 years
+297,1071,"lindenhurst, new york, usa",english,german ,19,male,0,naturalistic,usa,19 years
+298,1072,"lismore, new south wales, australia",english,none,22,male,0,naturalistic,australia,22 years
+299,1075,"windsor, ontario, canada",english,japanese ,59,male,0,naturalistic,usa,59 years
+300,1076,"dublin, ireland",english,irish ,18,male,0,naturalistic,ireland,18 years
+301,1078,"toronto, ontario, canada",english,none,41,male,0,naturalistic,canada,41 years
+302,1085,"melbourne, australia",english,finnish ,22,male,0,naturalistic,australia,22 years
+303,1086,"anaheim, california, usa",english,arabic ,45,female,0,naturalistic,usa,45 years
+304,1088,"clare, ireland",english,irish french ,20,female,0,naturalistic,ireland,20 years
+305,1094,"la paz, bolivia",english,arabic spanish ,24,female,0,naturalistic,"uk, usa",7 years
+306,1093,"london, uk",english,none,24,female,0,naturalistic,"uk, usa",24 years
+307,1100,"alexandria, va, usa",english,spanish ,48,male,0,naturalistic,"usa, new zealand",48 years
+308,1101,"cardiff, wales, uk",english,welsh ,34,male,0,naturalistic,"uk, new zealand",34 years
+309,1105,"dunedin, new zealand",english,german french maori japanese ,44,female,0,naturalistic,new zealand,44 years
+310,1108,"oxford, uk",english,punjabi ,37,female,0,naturalistic,"uk, usa",22 years
+311,1110,"detroit, michigan, usa",english,none,38,female,0,naturalistic,usa,38 years
+312,1113,"edmonton, alberta, canada",english,french ,40,female,0,naturalistic,canada,40 years
+313,1119,"silver spring, maryland, usa",english,spanish ,28,male,0,naturalistic,usa,28 years
+314,1120,"memphis, tennessee, usa",english,french ,26,female,0,naturalistic,usa,26 years
+315,1121,"los angeles, california, usa",english,none,25,male,0,naturalistic,usa,25 years
+316,1122,"sacramento, california, usa",english,none,33,male,0,naturalistic,usa,33 years
+317,1132,"burlington, vermont, usa",english,none,26,male,0,naturalistic,usa,26 years
+318,1137,"sarnia, ontario, canada",english,none,46,male,0,naturalistic,canada,46 years
+319,1138,"grimsby, lincolnshire, uk",english,none,29,male,0,naturalistic,uk,29 years
+320,1162,"maryland county, liberia",english,grebo ,59,female,0,naturalistic,"liberia, usa",59 years
+321,1163,"brooklyn, new york, usa",english,yiddish french hebrew ,52,male,0,naturalistic,usa,52 years
+322,1172,"yorkton, saskatchewan, canada",english,none,29,male,0,naturalistic,canada,29 years
+323,1173,"regina, saskatchewan, canada",english,none,31,female,0,naturalistic,canada,31 years
+324,1174,"st. marys, ontario, canada",english,french ,28,male,0,naturalistic,canada,28 years
+325,1176,"reading, pennsylvania, usa",english,italian ,32,male,0,naturalistic,usa,32 years
+326,1188,"fairborn, ohio, usa",english,none,53,male,0,naturalistic,usa,50 years
+327,1205,"dunedin, florida, usa",english,none,27,male,0,naturalistic,usa,27 years
+328,1206,"hollywood, florida, usa",english,thai ,23,female,0,naturalistic,usa,23 years
+329,1207,"boise, idaho, usa",english,french ,21,female,0,naturalistic,usa,19 years
+330,1208,"augusta, georgia, usa",english,french ,18,female,0,naturalistic,usa,18 years
+331,1209,"perth, australia",english,none,28,female,0,naturalistic,australia,28 years
+332,1212,"baltimore, maryland, usa",english,none,20,female,0,naturalistic,usa,20 years
+333,1214,"spokane, washington, usa",english,none,32,female,0,naturalistic,usa,29 years
+334,1215,"derby, england, uk",english,none,18,female,0,naturalistic,uk,18 years
+335,1216,"washington, district of columbia, usa",english,none,6,male,0,naturalistic,usa,6 years
+336,1217,"baltimore, maryland, usa",english,none,46,female,0,naturalistic,usa,44 years
+337,1218,"jersey city, new jersey, usa",english,none,84,female,0,naturalistic,"usa, canada",84 years
+338,1219,"sydney, australia",english,french ,53,female,0,naturalistic,"australia, canada",53 years
+339,1220,"chicago, illinois, usa",english,none,54,male,0,naturalistic,"usa, canada",54 years
+340,1222,"charleston, west virginia, usa",english,none,19,male,0,naturalistic,usa,19 years
+341,1224,"new york, new york, usa",english,german ,23,female,0,naturalistic,usa,23 years
+342,1225,"kansas city, missouri, usa",english,none,33,male,0,naturalistic,usa,33 years
+343,1226,"portland, maine, usa",english,german spanish ,23,male,0,naturalistic,usa,23 years
+344,1232,"lumberton, north carolina, usa",english,french spanish ,19,female,0,naturalistic,usa,19 years
+345,1233,"kansas city, missouri, usa",english,spanish ,20,male,0,naturalistic,usa,20 years
+346,1235,"east hartford, connecticut, usa",english,french ,60,male,0,naturalistic,usa,60 years
+347,1236,"burnsville, minnesota, usa",english,spanish ,22,female,0,naturalistic,usa,22 years
+348,1237,"las pinas, philippines",english,tagalog ,20,female,0,naturalistic,philippines,20 years
+349,1239,"warrenton, virginia, usa",english,none,24,female,0,naturalistic,usa,24 years
+350,1241,"polesworth, staffordshire, uk",english,none,18,female,0,naturalistic,uk,18 years
+351,1242,"carthage, missouri, usa",english,none,37,male,0,naturalistic,usa,37 years
+352,1243,"singapore, singapore",english,mandarin hokkien cantonese hainanese ,25,male,0,naturalistic,singapore,25 years
+353,1246,"saskatoon, saskatchewan, canada",english,french ,18,male,0,naturalistic,canada,18 years
+354,1250,"christchurch, new zealand",english,maori french german ,23,female,0,naturalistic,"new zealand, ireland, uk, usa",22 years
+355,1256,"los angeles, california, usa",english,vietnamese ,19,male,0,naturalistic,usa,19 years
+356,1257,"morden, manitoba, canada",english,none,23,female,0,naturalistic,canada,23 years
+357,1258,"alto, georgia, usa",english,german ,24,male,0,naturalistic,usa,24 years
+358,1259,"fredericton, new brunswick, canada",english,none,19,male,0,naturalistic,canada,19 years
+359,1276,"sackville, new brunswick, canada",english,french latin german italian spanish ,32,male,0,naturalistic,"canada, usa",32 years
+360,1277,"erie, pennsylvania, usa",english,hebrew ,19,female,0,naturalistic,usa,19 years
+361,1280,"burnsville, minnesota, usa",english,spanish chinese ,20,female,0,naturalistic,usa,20 years
+362,1281,"cork, ireland",english,irish ,21,male,0,naturalistic,ireland,21 years
+363,1287,"castle donington, uk",english,none,20,male,0,naturalistic,uk,20 years
+364,1288,"sydney, australia",english,french tagalog ,28,female,0,naturalistic,australia,24 years
+365,1292,"oxford, uk",english,french ,52,male,0,naturalistic,uk,52 years
+366,1293,"bournesmouth, uk",english,none,25,female,0,naturalistic,uk,25 years
+367,1294,"birkenhead, uk",english,french russian ,25,female,0,naturalistic,uk,23 years
+368,1295,"strattford-on-avon, uk",english,french german ,43,male,0,naturalistic,"uk, singapore",43 years
+369,1297,"mcminnville, oregon, usa",english,spanish ,27,male,0,naturalistic,usa,27 years
+370,1302,"pondicherry, india",english,french tamil ,22,male,0,naturalistic,"canada, ireland",16 years
+371,1303,"colorado springs, colorado, usa",english,french ,27,female,0,naturalistic,"usa, canada",27 years
+372,1307,"christiansburg, virginia, usa",english,none,80,male,0,naturalistic,usa,80 years
+373,1308,"russellville, kentucky, usa",english,none,22,male,0,naturalistic,usa,22 years
+374,1310,"milford haven, wales, uk",english,welsh ,36,male,0,naturalistic,uk,36 years
+375,1312,"manchester, connecticut, usa",english,spanish ,28,male,0,naturalistic,"usa, uk",28 years
+376,1315,"pasadena, california, usa",english,none,46,male,0,naturalistic,usa,46 years
+377,1319,"trenton, michigan, usa",english,none,32,female,0,naturalistic,usa,32 years
+378,1320,"silver spring, maryland, usa",english,none,38,female,0,naturalistic,usa,38 years
+379,1321,"summit, new jersey, usa",english,none,43,male,0,naturalistic,usa,43 years
+380,1323,"roanoke, virginia, usa",english,spanish french ,34,female,0,naturalistic,usa,33 years
+381,1324,"pike county, kentucky, usa",english,none,85,male,0,naturalistic,usa,85 years
+382,1325,"arlington, virginia, usa",english,none,34,male,0,naturalistic,usa,29 years
+383,1326,"washington, district of columbia, usa",english,none,32,female,0,naturalistic,usa,22 years
+384,1327,"williamson, west virginia, usa",english,none,57,male,0,naturalistic,usa,57 years
+385,1328,"mcveigh, kentucky, usa",english,none,77,female,0,naturalistic,usa,77 years
+386,1330,"los angeles, california, usa",english,spanish ,56,female,0,naturalistic,usa,56 years
+387,1331,"lancaster, california, usa",english,spanish ,21,female,0,naturalistic,usa,21 years
+388,1332,"bluefield, west virginia, usa",english,none,70,female,0,naturalistic,usa,70 years
+389,1333,"aldie, virginia, usa",english,none,71,female,0,naturalistic,usa,71 years
+390,1334,"milwaukee, wisconsin, usa",english,mandarin taiwanese ,74,male,0,naturalistic,usa,67 years
+391,1335,"milton, florida, usa",english,none,84,female,0,naturalistic,usa,84 years
+392,1336,"warrenton, virginia, usa",english,none,62,male,0,naturalistic,usa,62 years
+393,1337,"washington, district of columbia, usa",english,french ,58,female,0,naturalistic,usa,58 years
+394,1339,"aiken, south carolina, usa",english,none,82,female,0,naturalistic,usa,82 years
+395,1340,"alexandria, virginia, usa",english,none,39,male,0,naturalistic,usa,39 years
+396,1341,"orange, virginia, usa",english,none,48,female,0,naturalistic,usa,48 years
+397,1342,"wadesboro, north carolina, usa",english,none,76,female,0,naturalistic,usa,76 years
+398,1343,"salisbury, north carolina, usa",english,none,83,female,0,naturalistic,usa,83 years
+399,1345,"la grange, georgia, usa",english,none,80,female,0,naturalistic,usa,80 years
+400,1348,"shanklin, isle of wight, uk",english,none,59,female,0,naturalistic,canada,55 years
+401,1349,"lucerne, switzerland",english,none,26,male,0,naturalistic,australia,26 years
+402,1350,"canberra, australia",english,none,26,female,0,naturalistic,australia,26 years
+403,1351,"sydney, australia",english,none,29,female,0,naturalistic,australia,29 years
+404,1352,"windsor, australia",english,italian japanese ,29,male,0,naturalistic,australia,29 years
+405,1353,"geelong, australia",english,german indonesian ,32,female,0,naturalistic,"australia, usa",30 years
+406,1358,"pensacola, florida, usa",english,none,24,female,0,naturalistic,usa,24 years
+407,1360,"windsor, ontario, canada",english,maltese ,47,male,0,naturalistic,canada,47 years
+408,1361,"lynwood, california, usa",english,spanish ,64,male,0,naturalistic,usa,64 years
+409,1362,"maitland, australia",english,french ,60,female,0,naturalistic,australia,60 years
+410,1363,"hamilton, new zealand",english,none,35,male,0,naturalistic,"New Zealand, Australia",35 years
+411,1371,"washington, district of columbia, usa",english,spanish ,26,female,0,naturalistic,usa,26 years
+412,1372,"washington, district of columbia, usa",english,german ,31,female,0,naturalistic,usa,25 years
+413,1373,"manchester, england, uk",english,none,20,female,0,naturalistic,uk,20 years
+414,1374,"woonsocket, rhode island, usa",english,none,30,female,0,naturalistic,usa,30 years
+415,1375,"woonsocket, rhode island, usa",english,none,32,male,0,naturalistic,usa,32 years
+416,1377,"sydney, australia",english,portuguese ,34,male,0,naturalistic,"australia, usa",20 years
+417,1380,"cardiff, wales, uk",english,german ,20,female,0,naturalistic,uk,20 years
+418,1384,"arlington, virginia",english,none,29,male,0,naturalistic,usa,29 years
+419,1385,"youngstown, ohio, usa",english,german gaelic ,27,male,0,naturalistic,usa,27 years
+420,1387,"auckland, new zealand",english,none,21,male,0,naturalistic,new zealand,21 years
+421,1388,"landstuhl, germany",english,french mandarin ,38,male,0,naturalistic,usa,25 years
+422,1390,"rochester, new york, usa",english,spanish ,31,male,0,naturalistic,usa,31 years
+423,1395,"baltimore, maryland, usa",english,spanish german italian ,24,female,0,naturalistic,usa,24 years
+424,1409,"danville, virginia, usa",english,none,75,male,0,naturalistic,usa,75 years
+425,1410,"danville, virginia, usa",english,none,31,male,0,naturalistic,usa,31 years
+426,1411,"florence, south carolina, usa",english,none,30,female,0,naturalistic,usa,30 years
+427,1412,"hanover, pennsylvania, usa",english,none,68,female,0,naturalistic,usa,68 years
+428,1413,"kingstree, south carolina, usa",english,none,55,female,0,naturalistic,usa,55 years
+429,1416,"philadelphia, pennsylvania, usa",english,german ,19,female,0,naturalistic,usa,19 years
+430,1419,"melbourne, australia",english,none,23,female,0,naturalistic,australia,23 years
+431,1423,"green bay, wisconsin, usa",english,german ,23,female,0,naturalistic,usa,23 years
+432,1428,"dublin, ireland",english,french spanish ,22,female,0,naturalistic,ireland,21 years
+433,1430,"gladwin, michigan, usa",english,none,32,female,0,naturalistic,usa,32 years
+434,1469,"kansas city, kansas, usa",english,german ,24,male,0,naturalistic,usa,24 years
+435,1471,"palm springs, california, usa",english,japanese ,20,female,0,naturalistic,usa,17 years
+436,1475,"freeport, the bahamas",english,none,19,female,0,naturalistic,the bahamas,19 years
+437,1477,"cleveland, ohio, usa",english,french italian ,21,male,0,naturalistic,usa,21 years
+438,1492,"houston, texas, usa",english,none,20,female,0,naturalistic,usa,20 years
+439,1493,"richmond, british columbia, canada",english,none,18,female,0,naturalistic,canada,18 years
+440,1502,"glasgow, scotland, uk",english,spanish ,22,female,0,naturalistic,scotland,22 years
+441,1524,"oquawka, illinois, usa",english,french ,19,female,0,naturalistic,usa,19 years
+442,1528,"salisbury mills, new york, usa",english,french spanish ,23,male,0,naturalistic,usa,23 years
+443,1530,"fort collins, colorado, usa",english,french spanish ,31,male,0,naturalistic,usa,31 years
+444,1531,"anniston, alabama, usa",english,spanish ,24,male,0,naturalistic,usa,24 years
+445,1532,"san francisco, california, usa",english,mandarin ,60,male,0,naturalistic,usa,59 years
+446,1533,"moorhead, minnesota, usa",english,none,23,female,0,naturalistic,usa,23 years
+447,1534,"hartford, connecticut, usa",english,french ,21,male,0,naturalistic,usa,21 years
+448,1536,"isle of arran, scotland, uk",english,german ,20,male,0,naturalistic,uk,20 years
+449,1538,"barton, vermont, usa",english,none,27,male,0,naturalistic,usa,27 years
+450,1544,"windsor, uk",english,french german ,26,male,0,naturalistic,uk,26 years
+451,1546,"hazlehurst, georgia, usa",english,russian ,44,male,0,naturalistic,usa,44 years
+452,1547,"newcastle, australia",english,none,24,male,0,naturalistic,australia,24 years
+453,1548,"chicago, illinois, usa",english,french ,21,female,0,naturalistic,usa,21 years
+454,1550,"raleigh, north carolina, usa",english,spanish ,19,female,0,naturalistic,usa,19 years
+455,1552,"washington, dc, usa",english,spanish ,29,female,0,naturalistic,usa,29 years
+456,1554,"lancashire, leyland, uk",english,none,37,female,0,naturalistic,uk,37 years
+457,1555,"syracuse, new york, usa",english,none,43,male,0,naturalistic,usa,40 years
+458,1559,"reno, nevada, usa",english,japanese ,22,female,0,naturalistic,usa,22 years
+459,1560,"charlotte, north carolina, usa",english,french german ,19,male,0,naturalistic,usa,19 years
+460,1561,"rutland, england, uk",english,german ,19,female,0,naturalistic,uk,19 years
+461,1563,"poughkeepsie, new york, usa",english,none,44,female,0,naturalistic,usa,44 years
+462,1564,"paducah, kentucky, usa",english,german ,20,male,0,naturalistic,usa,20 years
+463,1571,"brooklyn, new york, usa",english,french spanish ,53,female,0,naturalistic,usa,53 years
+464,1618,"ottawa, ontario, canada",english,german french ,27,male,0,naturalistic,canada,24 years
+465,1635,"aylesbury, buckinghamshire, uk",english,french spanish mandarin ,20,male,0,naturalistic,uk,19 years
+466,1637,"portland, maine, usa",english,none,18,male,0,naturalistic,usa,18 years
+467,1639,"pozzuoli, italy",english,none,23,male,1,naturalistic,usa,18 years
+468,1640,"myrtle beach, south carolina, usa",english,"german greek, ancient ",30,male,0,naturalistic,usa,30 years
+469,1641,"knoxville, tennessee, usa",english,japanese ,22,male,0,naturalistic,usa,21 years
+470,1642,"leighton buzzard, uk",english,french japanese ,21,male,0,naturalistic,uk,20 years
+471,1648,"calgary, alberta, canada",english,spanish french ,26,female,0,naturalistic,canada,24.5 years
+472,1649,"rota, spain",english,spanish russian ,26,male,0,naturalistic,usa,23 years
+473,1650,"nottingham, uk",english,none,20,male,0,naturalistic,uk,20 years
+474,1656,"rochester, minnesota, usa",english,spanish ,33,female,0,naturalistic,usa,33 years
+475,1657,"ogden, utah, usa",english,none,29,female,0,naturalistic,usa,29 years
+476,1658,"manchester, new hampshire, usa",english,none,64,female,0,naturalistic,usa,64 years
+477,1659,"san diego, california, usa",english,german ,31,female,0,naturalistic,usa,27 years
+478,1661,"sydney, nova scotia, canada",english,none,19,male,0,naturalistic,canada,19 years
+479,1664,"new york, new york, usa",english,none,64,female,0,naturalistic,usa,64 years
+480,1665,"winston-salem, north carolina, usa",english,none,58,male,0,naturalistic,usa,58 years
+481,1666,"stringtown, oklahoma, usa",english,german spanish ,88,female,0,naturalistic,usa,82 years
+482,1667,"yeadon, pennsylvania, usa",english,none,74,female,0,naturalistic,usa,74 years
+483,1668,"boston, massachusetts, usa",english,spanish ,19,male,0,naturalistic,usa,19 years
+484,1672,"dublin, ireland",english,irish french japanese swedish spanish ,24,male,0,naturalistic,ireland,24 years
+485,1674,"cromwell, connecticut, usa",english,french ,20,male,0,naturalistic,usa,20 years
+486,1683,"corentyne, guyana",english,none,53,female,0,naturalistic,"guyana, usa",53 years
+487,1688,"london, uk",english,french ,22,female,0,naturalistic,uk,22 years
+488,1692,"irvine, scotland, uk",english,none,35,female,0,naturalistic,"uk, usa",35 years
+489,1694,"kingston, jamaica",english,none,46,female,0,naturalistic,"jamaica, usa",46 years
+490,1709,"auckland, new zealand",english,none,18,male,0,naturalistic,new zealand,18.5 years
+491,1713,"westmoreland, jamaica",english,none,79,female,0,naturalistic,"jamaica, usa",79 years
+492,1716,"omaha, nebraska, usa",english,spanish german ,22,female,0,naturalistic,usa,22 years
+493,1718,"miami, florida, usa",english,spanish japanese ,20,male,0,naturalistic,usa,13.5 years
+494,1719,"findlay, ohio, usa",english,korean japanese ,27.5,male,0,naturalistic,usa,27.5 years
+495,1720,"kirkland, washington, usa",english,none,21,male,0,naturalistic,usa,21 years
+496,1724,"london, england, uk",english,japanese ,20,male,0,naturalistic,uk,20 years
+497,1726,"cleveland, ohio, usa",english,none,22,male,0,naturalistic,usa,22 years
+498,1727,"prince george, british columbia, canada",english,french german ,27,male,0,naturalistic,canada,27 years
+499,1728,"st. paul, minnesota, usa",english,french ,21,female,0,naturalistic,usa,21 years
+500,1733,"albury, new south wales, australia",english,indonesian tongan ,38,male,0,naturalistic,australia,38 years
+501,1734,"pittsburgh, pennsylvania, usa",english,none,64,female,0,naturalistic,usa,64 years
+502,1735,"farmington hills, michigan, usa",english,none,30,female,0,naturalistic,usa,30 years
+503,1739,"benin city, nigeria",english,spanish german ,29,female,0,naturalistic,"nigeria, usa",25 years
+504,1786,"west palm beach, florida, usa",english,japanese ,25,male,0,naturalistic,usa,25 years
+505,1798,"beirut, lebanon",english,french italian arabic spanish mandarin ,50,female,0,naturalistic,usa,9 years
+506,1799,"new orleans, louisiana, usa",english,french mandarin ,30,female,0,naturalistic,usa,30 years
+507,1800,"accra, ghana",english,twi ga spanish ,21,male,0,naturalistic,"ghana, usa",21 years
+508,1801,"winfield, illinois, usa",english,spanish ,20,female,0,naturalistic,usa,20 years
+509,1802,"coudersport, pennsylvania, usa",english,spanish ,44,female,0,naturalistic,usa,35 years
+510,1803,"philadelphia, pennsylvania, usa",english,french ,66,female,0,naturalistic,usa,66 years
+511,1818,"montgomery, alabama, usa",english,german ,31,female,0,naturalistic,usa,31 years
+512,1819,"salina, kansas, usa",english,none,54,female,0,naturalistic,usa,54 years
+513,1856,"bocas del toro, panama",english,spanish ,52,female,0,naturalistic,"panama, usa",52 years
+514,1872,"youngstown, ohio, usa",english,none,57,male,0,naturalistic,usa,57 years
+515,1873,"youngstown, ohio, usa",english,none,55,female,0,naturalistic,usa,55 years
+516,1875,"dripping springs, texas, usa",english,french japanese mandarin german ,32,female,0,naturalistic,usa,32 years
+517,1876,"colorado springs, colorado, usa",english,spanish ,33,male,0,naturalistic,usa,33 years
+518,1878,"kells, meath, ireland",english,irish ,24,male,0,naturalistic,ireland,24 years
+519,1882,"karachi, pakistan",english,urdu german ,18,female,1,naturalistic,"canada, usa",16 years
+520,1884,"st. paul, minnesota, usa",english,mandarin spanish ,47,female,0,naturalistic,usa,47 years
+521,1886,"bethesda, maryland, usa",english,spanish ,25,female,0,naturalistic,usa,25 years
+522,1887,"bethpage, new york, usa",english,none,22,female,0,naturalistic,usa,22 years
+523,1888,"madison, wisconsin, usa",english,arabic french ,18,female,0,naturalistic,usa,18 years
+524,1890,"downers grove, illinois, usa",english,none,19,male,0,naturalistic,usa,19 years
+525,1893,"albion, new york, usa",english,none,18,female,0,naturalistic,usa,18 years
+526,1895,"woodbridge, virginia, usa",english,none,20,male,0,naturalistic,usa,20 years
+527,1907,"wynnewood, pennsylvania, usa",english,italian ,25,female,0,naturalistic,usa,25 years
+528,1908,"green bay, wisconsin, usa",english,arabic farsi swahili spanish ,52,female,0,naturalistic,usa,52 years
+529,1925,"burlington, vermont, usa",english,french spanish ,29,female,0,naturalistic,usa,29 years
+530,1926,"detroit, michigan, usa",english,german ,50,female,0,naturalistic,usa,35 years
+531,1928,"nokesville, virginia, usa",english,japanese french german ,29,female,0,naturalistic,usa,26 years
+532,1933,"bristol, connecticut, usa",english,none,23,female,0,naturalistic,usa,23 years
+533,1934,"fairfax, virginia, usa",english,spanish ,38,female,0,naturalistic,usa,38 years
+534,1951,"mineola, new york, usa",english,none,29,female,0,naturalistic,usa,29 years
+535,1955,"plymouth, massachusetts, usa",english,none,22,female,0,naturalistic,usa,22 years
+536,1956,"richmond, virginia, usa",english,hebrew spanish ,21,female,0,naturalistic,usa,21 years
+537,1957,"woodbridge, virginia, usa",english,spanish ,21,female,0,naturalistic,usa,21 years
+538,1958,"lyndhurst, virginia, usa",english,french american sign language ,20,female,0,naturalistic,usa,20 years
+539,1959,"orange county, california, usa",english,none,19,female,0,naturalistic,usa,19 years
+540,1960,"arlington, virginia, usa",english,japanese ,18,female,0,naturalistic,usa,18 years
+541,1961,"fort lauderdale, florida, usa",english,none,27,female,0,naturalistic,usa,27 years
+542,1962,"toronto, ontario, canada",english,french ,60,male,0,naturalistic,"canada, usa",55 years
+543,1969,"vancouver, british columbia, canada",english,french japanese ,39,female,0,naturalistic,"canada, usa, uk, cayman islands",36 years
+544,1970,"hanover, new hampshire, usa",english,spanish ,31,male,0,naturalistic,usa,31 years
+545,1995,"tangier island, virginia, usa",english,none,56,male,0,naturalistic,usa,56 years
+546,1996,"tangier island, virginia, usa",english,none,43,female,0,naturalistic,usa,43 years
+547,1997,"tangier island, virginia, usa",english,none,63,male,0,naturalistic,usa,63 years
+548,2003,"dublin, ireland",english,irish ,61,male,0,naturalistic,ireland,61 years
+549,2012,"exminister, uk",english,french arabic ,19,female,0,naturalistic,"uk, usa",17 years
+550,2028,"fredericksburg, virginia, usa",english,none,82,male,0,naturalistic,usa,82 years
+551,2029,"king george, virginia, usa",english,none,81,female,0,naturalistic,usa,81 years
+552,2043,"bethesda, maryland, usa",english,french italian ,23,female,0,naturalistic,USA,20 years
+553,2046,"nashville, tennessee, usa",english,spanish ,21,male,0,naturalistic,usa,21 years
+554,2047,"hoffman estates, illinois, usa",english,spanish ,22,female,0,naturalistic,usa,22 years
+555,2049,"brooklyn, new york, usa",english,yiddish spanish ,90,male,0,naturalistic,usa,90 years
+556,2050,"brooklyn, new york, usa",english,yiddish ,84,female,0,naturalistic,usa,84 years
+557,2053,"sharjah, united arab emirates",english,tamil hindi arabic ,25,female,2,naturalistic,usa,6 years
+558,2055,"queens, new york, usa",english,none,23,male,0,naturalistic,usa,23 years
+559,2056,"reston, virginia, usa",english,spanish ,19,female,0,naturalistic,usa,19 years
+560,2059,"hartford, connecticut, usa",english,spanish ,22,female,0,naturalistic,usa,22 years
+561,2060,"yorktown, virginia, usa",english,spanish ,20,female,0,naturalistic,usa,20 years
